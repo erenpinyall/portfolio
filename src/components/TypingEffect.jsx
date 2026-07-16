@@ -37,8 +37,9 @@ export default function TypingEffect({ texts, speed = 80, deleteSpeed = 40, paus
       className="typing-wrapper"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.8, duration: 0.5 }}
+      transition={{ delay: 0.5, duration: 0.5 }}
     >
+      <span className="typing-prefix">I'm </span>
       <span className="typing-text">{displayText}</span>
       <span className="typing-cursor" />
     </motion.div>

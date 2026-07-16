@@ -74,19 +74,19 @@ const projects = [
   {
     name: 'vehicle rental management system',
     year: '2025',
-    desc: 'Full-stack vehicle rental management application with normalized relational database for vehicles, customers and rental transactions. Implemented CRUD operations and rental management functionalities.',
+    desc: 'Araçlar, müşteriler ve kiralama işlemleri için normalize edilmiş veritabanına sahip full-stack kiralama yönetim uygulaması. CRUD işlemleri ve kiralama yönetim fonksiyonları geliştirildi.',
     tech: ['C#', 'Microsoft SQL Server', 'ADO.NET', 'OOP'],
   },
   {
     name: 'turkish cyberbullying detection',
     year: '2025',
-    desc: 'Machine learning model to classify Turkish cyberbullying content using NLP techniques. Performed preprocessing including stemming, stopword removal and TF-IDF vectorization. Achieved 85.39% accuracy.',
+    desc: 'Türkçe siber zorbalık içeriklerini sınıflandırmak için NLP teknikleri kullanan makine öğrenmesi modeli. Stemming, stopword kaldırma ve TF-IDF vektörizasyonu ile %85.39 doğruluk elde edildi.',
     tech: ['Python', 'Scikit-learn', 'Pandas', 'NLTK', 'TF-IDF'],
   },
   {
     name: 'library management system',
     year: '2024',
-    desc: 'Java-based library management system with RESTful APIs for managing books, members and borrowing/return transactions. Built a normalized MySQL database schema with Hibernate ORM integration.',
+    desc: 'Kitaplar, üyeler ve ödünç alma/iade işlemleri için RESTful API\'lere sahip Java tabanlı kütüphane yönetim sistemi. MySQL veritabanı şeması ve Hibernate ORM entegrasyonu.',
     tech: ['Java', 'Spring Boot', 'Hibernate', 'MySQL', 'Maven', 'JUnit'],
   },
 ];
@@ -101,6 +101,7 @@ const highlights = [
 ];
 
 const typingTexts = [
+  'full stack developer',
   'building web applications',
   'learning new technologies',
   'solving complex problems',
@@ -171,14 +172,6 @@ function App() {
               <span className="name-line">eren</span>
               <span className="name-line">pinyal</span>
             </h1>
-            <motion.p
-              className="hero-title"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-            >
-              full stack developer
-            </motion.p>
             <p className="hero-bio">
               computer engineering graduate with internship experience in web development
               and IT support. experienced in developing software using C#, JavaScript, SQL,

@@ -87,14 +87,20 @@
 .typing-wrapper {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
   margin-top: 0.5rem;
   min-height: 24px;
 }
 
-.typing-text {
-  font-size: 13px;
+.typing-prefix {
+  font-size: 14px;
   font-weight: 400;
+  color: var(--text-muted);
+}
+
+.typing-text {
+  font-size: 14px;
+  font-weight: 500;
   color: var(--accent);
 }
 
