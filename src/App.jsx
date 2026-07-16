@@ -45,24 +45,31 @@ const experience = [
 const projects = [
   {
     name: 'freshy',
-    year: '2025',
+    year: '2026',
     desc: 'Instacart / Blinkit benzeri full-stack market sipariş ve teslimat uygulaması. JWT auth, Stripe ödeme, canlı sipariş takibi, admin paneli ve delivery partner sistemi.',
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
     github: 'https://github.com/erenpinyall/freshy',
   },
   {
     name: 'rag-pdf',
-    year: '2025',
+    year: '2026',
     desc: 'PDF dosyalarını yükleyip vektörel olarak indeksleyen, soruları doğrudan belgelere dayanarak cevaplandıran yerel RAG asistanı. ChromaDB, SentenceTransformers ve Ollama ile çalışıyor.',
     tech: ['Python', 'FastAPI', 'ChromaDB', 'SentenceTransformers', 'Ollama', 'LangChain'],
     github: 'https://github.com/erenpinyall/rag-pdf',
   },
   {
     name: 'gitstats',
-    year: '2025',
+    year: '2026',
     desc: 'GitHub kullanıcılarının profillerini derinlemesine analiz eden interaktif web uygulaması. Profil skoru, teknoloji dağılımı, aktivite ısı haritası ve AI destekli analiz.',
     tech: ['React', 'JavaScript', 'Recharts', 'Chart.js', 'GitHub API'],
     github: 'https://github.com/erenpinyall/gitstats',
+  },
+  {
+    name: 'portfolio',
+    year: '2026',
+    desc: 'React ve Framer Motion ile hazırlanmış, iki panelli interaktif kişisel portfolio sitesi. Scroll animasyonları, typing efekti ve responsive tasarım.',
+    tech: ['React', 'Vite', 'Framer Motion', 'CSS'],
+    github: 'https://github.com/erenpinyall/portfolio',
   },
   {
     name: 'vehicle rental management system',
@@ -164,6 +171,14 @@ function App() {
               <span className="name-line">eren</span>
               <span className="name-line">pinyal</span>
             </h1>
+            <motion.p
+              className="hero-title"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              full stack developer
+            </motion.p>
             <p className="hero-bio">
               computer engineering graduate with internship experience in web development
               and IT support. experienced in developing software using C#, JavaScript, SQL,
