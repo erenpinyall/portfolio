@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 import TypingEffect from './components/TypingEffect';
@@ -109,11 +110,32 @@ const typingTexts = [
 ];
 
 function App() {
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }, [dark]);
+
   return (
     <div className="layout">
       {/* LEFT PANEL */}
       <aside className="left-panel">
         <nav className="nav">
+          <motion.button
+            className="theme-toggle"
+            onClick={() => setDark(!dark)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            title={dark ? 'Light mode' : 'Dark mode'}
+          >
+            {dark ? '☀️' : '🌙'}
+          </motion.button>
           <motion.a
             href="#experience"
             className="nav-link"
@@ -172,6 +194,14 @@ function App() {
               <span className="name-line">eren</span>
               <span className="name-line">pinyal</span>
             </h1>
+            <motion.p
+              className="hero-title"
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              full stack developer
+            </motion.p>
             <p className="hero-bio">
               computer engineering graduate with internship experience in web development
               and IT support. experienced in developing software using C#, JavaScript, SQL,
