@@ -46,7 +46,7 @@ Bilgisayar Mühendisliği mezunu olarak projelerimi, deneyimlerimi ve yetenekler
 
 <div align="center">
 
-[![Live](https://img.shields.io/badge/LIVE-Vercel-black?style=for-the-badge)](https://erenpinyal.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-erenpinyall-181717?style=for-the-badge&logo=github)](https://github.com/erenpinyall/portfolio)
+[![Live](https://img.shields.io/badge/LIVE-erenpinyal.com-black?style=for-the-badge)](https://erenpinyal.com)
+[![GitHub](https://img.shields.io/badge/GitHub-erenpinyall-181717?style=for-the-badge&logo=github)](https://github.com/erenpinyall)
 
 </div>
