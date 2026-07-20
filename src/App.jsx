@@ -73,6 +73,13 @@ const projects = [
     github: 'https://github.com/erenpinyall/portfolio',
   },
   {
+    name: 'finance tracker',
+    year: '2026',
+    desc: 'Kişisel finans takip ve raporlama sistemi. Gelir/gider yönetimi, otomatik bütçe aşımı kontrolü ile mail bildirimi ve Apache POI ile Excel raporlama. 33 test ile tam kapsamlı.',
+    tech: ['Java', 'Spring Boot', 'Spring Data JPA', 'Apache POI', 'JUnit 5', 'Mockito', 'Maven'],
+    github: 'https://github.com/erenpinyall/finance-tracker',
+  },
+  {
     name: 'vehicle rental management system',
     year: '2025',
     desc: 'Araçlar, müşteriler ve kiralama işlemleri için normalize edilmiş veritabanına sahip full-stack kiralama yönetim uygulaması. CRUD işlemleri ve kiralama yönetim fonksiyonları geliştirildi.',
