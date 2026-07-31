@@ -45,6 +45,13 @@ const experience = [
 
 const projects = [
   {
+    name: 'proje yönetim sistemi',
+    year: '2026',
+    desc: 'JWT auth, SignalR canlı güncellemeler ve rol tabanlı yetkilendirme içeren full-stack proje yönetim sistemi. Proje, görev, yorum ve üye yönetimi; Docker destekli.',
+    tech: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SignalR', 'React', 'TypeScript', 'JWT', 'Docker'],
+    github: 'https://github.com/erenpinyall/proje-yonetim-sistemi',
+  },
+  {
     name: 'freshy',
     year: '2026',
     desc: 'Instacart / Blinkit benzeri full-stack market sipariş ve teslimat uygulaması. JWT auth, Stripe ödeme, canlı sipariş takibi, admin paneli ve delivery partner sistemi.',
