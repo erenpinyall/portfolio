@@ -39,7 +39,7 @@ Bilgisayar Mühendisliği mezunu olarak projelerimi, deneyimlerimi ve yetenekler
 - **About** — İsim, bio ve typing animasyonu
 - **Skills** — Kategorilere ayrılmış teknoloji tag'leri
 - **Experience** — İnteraktif dot'lu iş deneyimi timeline'ı
-- **Projects** — 6 proje, açıklama, tech tag'leri ve GitHub linkleri
+- **Projects** — yaptığım projeler, açıklama, tech tag'leri ve GitHub linkleri
 - **Contact** — Email, LinkedIn ve GitHub linkleri
 
 ---
