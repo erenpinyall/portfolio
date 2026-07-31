@@ -472,6 +472,9 @@
 }
 
 .mini-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 10px;
   padding: 3px 8px;
   background: var(--bg-subtle);
@@ -480,6 +483,14 @@
   color: var(--text-muted);
   font-weight: 500;
   transition: all 0.2s ease;
+}
+
+.tech-dot {
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.55;
 }
 
 .timeline-group:hover .mini-tag {

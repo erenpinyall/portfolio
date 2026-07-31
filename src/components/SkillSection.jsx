@@ -1,31 +1,5 @@
 import { motion } from 'framer-motion';
-
-const tagIcons = {
-  'JavaScript (ES6+)': '⚡',
-  TypeScript: '🔷',
-  Python: '🐍',
-  Java: '☕',
-  'C#': '🟢',
-  SQL: '🗄️',
-  React: '⚛️',
-  'Next.js': '▲',
-  'Tailwind CSS': '🌊',
-  'Responsive Design': '📱',
-  'Spring Boot': '🍃',
-  'Node.js': '💚',
-  Express: '🚂',
-  'REST API': '🔗',
-  'JWT Auth': '🔐',
-  PostgreSQL: '🐘',
-  MySQL: '🐬',
-  'Microsoft SQL Server': '💾',
-  'Prisma ORM': '◆',
-  Git: '🔀',
-  GitHub: '🐙',
-  Vite: '⚡',
-  Maven: '📦',
-  'VS Code': '💙',
-};
+import TechIcon from './TechIcon';
 
 export default function SkillSection({ skills }) {
   return (
@@ -57,7 +31,7 @@ export default function SkillSection({ skills }) {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="tag-icon">{tagIcons[item] || '•'}</span>
+                <span className="tag-icon"><TechIcon name={item} size={14} /></span>
                 {item}
               </motion.span>
             ))}

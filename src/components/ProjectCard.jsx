@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import TechIcon from './TechIcon';
 
 export default function ProjectCard({ project, index }) {
   return (
@@ -33,8 +34,11 @@ export default function ProjectCard({ project, index }) {
       </div>
       <p className="project-desc">{project.desc}</p>
       <div className="exp-tags">
-        {project.tech.map((t, i) => (
-          <span className="mini-tag" key={t}>{t}</span>
+        {project.tech.map((t) => (
+          <span className="mini-tag" key={t}>
+            <TechIcon name={t} size={10} />
+            {t}
+          </span>
         ))}
       </div>
     </motion.div>
