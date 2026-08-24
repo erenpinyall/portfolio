@@ -30,6 +30,8 @@ import {
   SiDocker,
   SiGit,
   SiNextdotjs,
+  SiRedis,
+  SiC,
 } from 'react-icons/si';
 
 const CSharpIcon = ({ size }) => (
@@ -72,6 +74,8 @@ const brandColors = {
   MySQL: '#4479A1',
   Git: '#F05032',
   'VS Code': '#007ACC',
+  Redis: '#FF4438',
+  C: '#A8B9CC',
 };
 
 const icons = {
@@ -113,6 +117,8 @@ const icons = {
   MySQL: SiMysql,
   Git: SiGit,
   'Next.js': SiNextdotjs,
+  Redis: SiRedis,
+  C: SiC,
   'VS Code': VSCodeIcon,
 };
 

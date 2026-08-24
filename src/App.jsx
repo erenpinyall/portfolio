@@ -7,11 +7,11 @@ import TimelineItem from './components/TimelineItem';
 import ProjectCard from './components/ProjectCard';
 
 const skills = [
-  { label: 'languages', items: ['JavaScript (ES6+)', 'TypeScript', 'Python', 'Java', 'C#', 'SQL'] },
+  { label: 'languages', items: ['JavaScript (ES6+)', 'TypeScript', 'Python', 'Java', 'C', 'C#', 'SQL'] },
   { label: 'frontend', items: ['React', 'Next.js', 'Tailwind CSS', 'Responsive Design'] },
   { label: 'backend', items: ['Spring Boot', 'Node.js', 'Express', 'REST API', 'JWT Auth'] },
-  { label: 'databases', items: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'Prisma ORM'] },
-  { label: 'tools', items: ['Git', 'GitHub', 'Vite', 'Maven', 'VS Code'] },
+  { label: 'databases', items: ['PostgreSQL', 'MySQL', 'Redis', 'Microsoft SQL Server', 'Prisma ORM'] },
+  { label: 'tools', items: ['Git', 'GitHub', 'Docker', 'Vite', 'Maven', 'VS Code'] },
 ];
 
 const experience = [
