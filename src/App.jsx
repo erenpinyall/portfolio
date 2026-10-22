@@ -45,6 +45,14 @@ const experience = [
 
 const projects = [
   {
+    name: 'mecrenas',
+    year: '2026',
+    desc: 'League of Legends profesyonel head coach\'u Mecrenas için hazırlanan tek sayfalık kişisel site. Takım geçmişi, koçluk paketleri, kurslar, SSS ve iletişim bölümleri; animasyonlu ve tamamen responsive tasarım.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    live: 'https://mecrenas.vercel.app',
+    github: 'https://github.com/erenpinyall/mecrenas',
+  },
+  {
     name: 'proje yönetim sistemi',
     year: '2026',
     desc: 'JWT auth, SignalR canlı güncellemeler ve rol tabanlı yetkilendirme içeren full-stack proje yönetim sistemi. Proje, görev, yorum ve üye yönetimi; Docker destekli.',
