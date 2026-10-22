@@ -50,6 +50,7 @@ const projects = [
     desc: 'Kart açık artırması tabanlı iki takımlı savaş oyunu. Her tur 10 kart, teklif/pas döngüsü ve Kör Bid modu; 26 evren paketinde 1.308 fotoğraflı kart. Hesapsız, 4 haneli oda koduyla 2 ayrı cihazdan online oynanabiliyor.',
     tech: ['HTML', 'CSS', 'JavaScript', 'MQTT', 'Vercel'],
     live: 'https://secmece-bid-savasi.vercel.app',
+    preview: '/previews/secmece.webp',
     github: 'https://github.com/erenpinyall/secmece-bid-savasi',
   },
   {
@@ -58,6 +59,7 @@ const projects = [
     desc: 'League of Legends profesyonel head coach\'u Mecrenas için hazırlanan tek sayfalık kişisel site. Takım geçmişi, koçluk paketleri, kurslar, SSS ve iletişim bölümleri; animasyonlu ve tamamen responsive tasarım.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     live: 'https://mecrenas.vercel.app',
+    preview: '/previews/mecrenas.webp',
     github: 'https://github.com/erenpinyall/mecrenas',
   },
   {
@@ -93,6 +95,8 @@ const projects = [
     year: '2026',
     desc: 'React ve Framer Motion ile hazırlanmış, iki panelli interaktif kişisel portfolio sitesi. Scroll animasyonları, typing efekti ve responsive tasarım.',
     tech: ['React', 'Vite', 'Framer Motion', 'CSS'],
+    live: 'https://erenpinyal.com',
+    preview: '/previews/portfolio.webp',
     github: 'https://github.com/erenpinyall/portfolio',
   },
   {
