@@ -89,9 +89,19 @@ const projects = [
   {
     name: 'gitstats',
     year: '2026',
-    desc: 'GitHub kullanıcılarının profillerini derinlemesine analiz eden interaktif web uygulaması. Profil skoru, teknoloji dağılımı, aktivite ısı haritası ve AI destekli analiz.',
-    tech: ['React', 'JavaScript', 'Recharts', 'Chart.js', 'GitHub API'],
+    desc: 'GitHub kullanıcılarının profillerini derinlemesine analiz eden interaktif web uygulaması. Profil skoru, teknoloji dağılımı, aktivite ısı haritası ve AI destekli analiz. Scroll animasyonları, 3D kart efektleri ve animasyonlu gradient arka plan ile zenginleştirilmiş modern arayüz.',
+    tech: ['React', 'JavaScript', 'Recharts', 'Chart.js', 'Framer Motion', 'GitHub API'],
+    live: 'https://gitstats-three.vercel.app',
+    preview: '/previews/gitstats.webp',
     github: 'https://github.com/erenpinyall/gitstats',
+  },
+  {
+    name: 'reno bayi',
+    year: '2026',
+    desc: 'Araç satış ve filo yönetim sistemi. Müşteri, araç ve satış kayıtlarının yönetimi, Excel (xlsx) içe/dışa aktarma, filo takibi ve raporlama özellikleri. React, TypeScript ve Zustand ile geliştirilmiş; Tauri ile masaüstü uygulaması olarak da paketlenebiliyor.',
+    tech: ['React', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Vite', 'Tauri'],
+    live: 'https://reno-bayi.vercel.app',
+    preview: '/previews/reno-bayi.webp',
   },
   {
     name: 'portfolio',
