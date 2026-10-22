@@ -45,6 +45,14 @@ const experience = [
 
 const projects = [
   {
+    name: 'seçmece — takım savaşı',
+    year: '2026',
+    desc: 'Kart açık artırması tabanlı iki takımlı savaş oyunu. Her tur 10 kart, teklif/pas döngüsü ve Kör Bid modu; 26 evren paketinde 1.308 fotoğraflı kart. Hesapsız, 4 haneli oda koduyla 2 ayrı cihazdan online oynanabiliyor.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'MQTT', 'Vercel'],
+    live: 'https://secmece-bid-savasi.vercel.app',
+    github: 'https://github.com/erenpinyall/secmece-bid-savasi',
+  },
+  {
     name: 'mecrenas',
     year: '2026',
     desc: 'League of Legends profesyonel head coach\'u Mecrenas için hazırlanan tek sayfalık kişisel site. Takım geçmişi, koçluk paketleri, kurslar, SSS ve iletişim bölümleri; animasyonlu ve tamamen responsive tasarım.',
@@ -116,7 +124,7 @@ const projects = [
 
 const highlights = [
   'web developer intern at demiraysoft',
-  '6 projects on github',
+  '8 projects on github',
   'computer engineering graduate',
   'full-stack development enthusiast',
   'problem-solving oriented',

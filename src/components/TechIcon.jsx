@@ -32,6 +32,9 @@ import {
   SiNextdotjs,
   SiRedis,
   SiC,
+  SiHtml5,
+  SiMqtt,
+  SiVercel,
 } from 'react-icons/si';
 
 const CSharpIcon = ({ size }) => (
@@ -76,6 +79,9 @@ const brandColors = {
   'VS Code': '#007ACC',
   Redis: '#FF4438',
   C: '#A8B9CC',
+  HTML: '#E34F26',
+  MQTT: '#660066',
+  Vercel: '#000000',
 };
 
 const icons = {
@@ -119,6 +125,9 @@ const icons = {
   'Next.js': SiNextdotjs,
   Redis: SiRedis,
   C: SiC,
+  HTML: SiHtml5,
+  MQTT: SiMqtt,
+  Vercel: SiVercel,
   'VS Code': VSCodeIcon,
 };
 
