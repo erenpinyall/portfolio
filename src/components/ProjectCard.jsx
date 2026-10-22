@@ -4,7 +4,7 @@ import TechIcon from './TechIcon';
 export default function ProjectCard({ project, index }) {
   return (
     <motion.div
-      className="project-card"
+      className={`project-card${project.live ? ' is-live' : ''}`}
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-20px' }}
@@ -20,15 +20,17 @@ export default function ProjectCard({ project, index }) {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="github-link"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              title="View live site"
+              className="live-link"
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.97 }}
+              title="Canlı siteyi yeni sekmede aç"
+              aria-label={`${project.name} canlı sitesini aç`}
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="15" height="15">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
+              <span className="live-dot" aria-hidden="true" />
+              <span>Canlı Demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="10" height="10" aria-hidden="true">
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
               </svg>
             </motion.a>
           )}

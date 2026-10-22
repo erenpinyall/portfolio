@@ -566,6 +566,106 @@
   background: var(--accent-light);
 }
 
+/* Live demo badge */
+.live-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #15803d;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.32);
+  white-space: nowrap;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.live-link:hover {
+  color: #fff;
+  background: #22c55e;
+  border-color: #22c55e;
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+}
+
+.live-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+.live-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid #22c55e;
+  opacity: 0;
+  animation: live-ping 1.8s ease-out infinite;
+}
+
+@keyframes live-ping {
+  0% { transform: scale(0.5); opacity: 0.9; }
+  75%, 100% { transform: scale(1.7); opacity: 0; }
+}
+
+.live-link:hover .live-dot {
+  background: #fff;
+}
+
+.live-link:hover .live-dot::after {
+  border-color: #fff;
+}
+
+.project-card.is-live:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+.project-card:hover .live-link:not(:hover) {
+  border-color: rgba(34, 197, 94, 0.55);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+}
+
+.dark .live-link {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.35);
+}
+
+.dark .live-link:hover {
+  color: #052e16;
+  background: #4ade80;
+  border-color: #4ade80;
+  box-shadow: 0 4px 14px rgba(74, 222, 128, 0.3);
+}
+
+.dark .live-dot {
+  background: #4ade80;
+}
+
+.dark .live-dot::after {
+  border-color: #4ade80;
+}
+
+.dark .live-link:hover .live-dot {
+  background: #052e16;
+}
+
+.dark .live-link:hover .live-dot::after {
+  border-color: #052e16;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot::after {
+    animation: none;
+  }
+}
+
 .project-desc {
   font-size: 12.5px;
   font-weight: 300;
@@ -718,6 +818,11 @@
 
   .highlights {
     padding: 1.25rem;
+  }
+
+  .project-top {
+    flex-wrap: wrap;
+    gap: 0.4rem 0.75rem;
   }
 
   .highlights-grid {
