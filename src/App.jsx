@@ -67,6 +67,7 @@ const projects = [
     year: '2026',
     desc: 'JWT auth, SignalR canlı güncellemeler ve rol tabanlı yetkilendirme içeren full-stack proje yönetim sistemi. Proje, görev, yorum ve üye yönetimi; Docker destekli.',
     tech: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SignalR', 'React', 'TypeScript', 'JWT', 'Docker'],
+    preview: '/previews/proje-yonetim.webp',
     github: 'https://github.com/erenpinyall/proje-yonetim-sistemi',
   },
   {
@@ -74,6 +75,7 @@ const projects = [
     year: '2026',
     desc: 'Instacart / Blinkit benzeri full-stack market sipariş ve teslimat uygulaması. JWT auth, Stripe ödeme, canlı sipariş takibi, admin paneli ve delivery partner sistemi.',
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
+    preview: '/previews/freshy.webp',
     github: 'https://github.com/erenpinyall/freshy',
   },
   {
@@ -81,6 +83,7 @@ const projects = [
     year: '2026',
     desc: 'PDF dosyalarını yükleyip vektörel olarak indeksleyen, soruları doğrudan belgelere dayanarak cevaplandıran yerel RAG asistanı. ChromaDB, SentenceTransformers ve Ollama ile çalışıyor.',
     tech: ['Python', 'FastAPI', 'ChromaDB', 'SentenceTransformers', 'Ollama', 'LangChain'],
+    preview: '/previews/rag-pdf.webp',
     github: 'https://github.com/erenpinyall/rag-pdf',
   },
   {
@@ -104,6 +107,7 @@ const projects = [
     year: '2026',
     desc: 'Kişisel finans takip ve raporlama sistemi. Gelir/gider yönetimi, otomatik bütçe aşımı kontrolü ile mail bildirimi ve Apache POI ile Excel raporlama. 33 test ile tam kapsamlı.',
     tech: ['Java', 'Spring Boot', 'Spring Data JPA', 'Apache POI', 'JUnit 5', 'Mockito', 'Maven'],
+    preview: '/previews/finance-tracker.webp',
     github: 'https://github.com/erenpinyall/finance-tracker',
   },
   {
