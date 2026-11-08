@@ -42,6 +42,17 @@ Bilgisayar Mühendisliği mezunu olarak projelerimi, deneyimlerimi ve yetenekler
 - **Projects** — yaptığım projeler, açıklama, tech tag'leri ve GitHub linkleri
 - **Contact** — Email, LinkedIn ve GitHub linkleri
 
+## Öne Çıkan Projeler
+
+- **Nabız** — küçük ekipler için canlı proje ve görev panosu · [interaktif demo](https://nabiz-demo.vercel.app/demo)
+- **Seçmece — Takım Savaşı** — kart açık artırması tabanlı iki takımlı oyun · [canlı](https://secmece-bid-savasi.vercel.app)
+- **Freshy** — 66 ürünlü full-stack market ve teslimat demosu · [canlı](https://freshy-five.vercel.app)
+- **GitStats / Yıldızname** — GitHub profil analizi · [canlı](https://yzname.vercel.app)
+- **Mecrenas** — League of Legends koçu için kişisel site · [canlı](https://mecrenas.vercel.app)
+- **Reno Bayi** — araç satış ve filo yönetim sistemi · [canlı](https://reno-bayi.vercel.app)
+
+> Demo projelerde örnek veriler kullanılır; gerçek ödeme, teslimat veya üretim verisi işlenmez.
+
 ---
 
 <div align="center">

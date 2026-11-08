@@ -45,6 +45,16 @@ const experience = [
 
 const projects = [
   {
+    name: 'nabız',
+    year: '2026',
+    desc: 'Küçük ekipler için canlı proje ve görev panosu. Kanban görünümünde görevler, üye ve yorum yönetimi, rol tabanlı yetkilendirme ve SignalR ile gerçek zamanlı güncellemeler. Vercel’deki interaktif demo, gerçek API olmadan örnek verilerle ve simüle edilen canlı akışla çalışır.',
+    tech: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SignalR', 'React', 'TypeScript', 'JWT', 'Vercel'],
+    live: 'https://nabiz-demo.vercel.app/demo',
+    preview: '/previews/nabiz.webp',
+    demo: true,
+    github: 'https://github.com/erenpinyall/proje-yonetim-sistemi',
+  },
+  {
     name: 'seçmece — takım savaşı',
     year: '2026',
     desc: 'Kart açık artırması tabanlı iki takımlı savaş oyunu. Her tur 10 kart, teklif/pas döngüsü ve Kör Bid modu; 26 evren paketinde 1.308 fotoğraflı kart. Hesapsız, 4 haneli oda koduyla 2 ayrı cihazdan online oynanabiliyor.',
@@ -63,20 +73,13 @@ const projects = [
     github: 'https://github.com/erenpinyall/mecrenas',
   },
   {
-    name: 'proje yönetim sistemi',
-    year: '2026',
-    desc: 'JWT auth, SignalR canlı güncellemeler ve rol tabanlı yetkilendirme içeren full-stack proje yönetim sistemi. Proje, görev, yorum ve üye yönetimi; Docker destekli.',
-    tech: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SignalR', 'React', 'TypeScript', 'JWT', 'Docker'],
-    preview: '/previews/proje-yonetim.webp',
-    github: 'https://github.com/erenpinyall/proje-yonetim-sistemi',
-  },
-  {
     name: 'freshy',
     year: '2026',
-    desc: 'Instacart / Blinkit benzeri full-stack market sipariş ve teslimat uygulaması. JWT auth, Stripe ödeme, canlı sipariş takibi, admin paneli ve delivery partner sistemi.',
+    desc: '66 ürünlü full-stack market demosu. Ürün arama, filtreleme, sepet, kapıda ödeme simülasyonu ve sipariş takibi; JWT yetkilendirme, admin ve kurye panelleri. PostgreSQL ve atomik stok yönetimi. Gerçek ödeme veya teslimat yapılmaz.',
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
+    live: 'https://freshy-five.vercel.app',
     preview: '/previews/freshy.webp',
-    github: 'https://github.com/erenpinyall/freshy',
+    github: 'https://github.com/erenpinyall/grocery-delivery-platform',
   },
   {
     name: 'rag-pdf',

@@ -17,8 +17,8 @@ export default function ProjectCard({ project, index }) {
           href={project.live || project.github}
           target="_blank"
           rel="noopener noreferrer"
-          title={project.live ? 'Canlı siteyi aç' : 'Projeyi aç'}
-          aria-label={`${project.name} sitesini aç`}
+          title={project.live ? (project.demo ? 'Canlı demoyu aç' : 'Canlı siteyi aç') : 'Projeyi aç'}
+          aria-label={`${project.name} ${project.demo ? 'demoyu' : 'sitesini'} aç`}
         >
           <img src={project.preview} alt={`${project.name} site önizlemesi`} loading="lazy" />
           <span className="project-thumb-overlay" aria-hidden="true">
@@ -44,11 +44,11 @@ export default function ProjectCard({ project, index }) {
                 className="live-link"
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                title="Canlı siteyi yeni sekmede aç"
-                aria-label={`${project.name} canlı sitesini aç`}
+                title={project.demo ? 'Canlı demoyu yeni sekmede aç' : 'Canlı siteyi yeni sekmede aç'}
+                aria-label={`${project.name} ${project.demo ? 'canlı demosunu' : 'canlı sitesini'} aç`}
               >
                 <span className="live-dot" aria-hidden="true" />
-                <span>Canlı Demo</span>
+                <span>{project.demo ? 'Demo' : 'Canlı Demo'}</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="10" height="10" aria-hidden="true">
                   <path d="M7 17 17 7" />
                   <path d="M7 7h10v10" />
