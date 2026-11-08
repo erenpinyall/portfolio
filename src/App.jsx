@@ -57,7 +57,7 @@ const projects = [
   {
     name: 'seçmece — takım savaşı',
     year: '2026',
-    desc: 'Kart açık artırması tabanlı iki takımlı savaş oyunu. Her tur 10 kart, teklif/pas döngüsü ve Kör Bid modu; 26 evren paketinde 1.308 fotoğraflı kart. Hesapsız, 4 haneli oda koduyla 2 ayrı cihazdan online oynanabiliyor.',
+    desc: 'Kart açık artırması tabanlı iki takımlı savaş oyunu. Her tur 10 kart, teklif/pas döngüsü ve Kör Bid modu; 36 pakette 1.411 kart (26 fotoğraflı evren, 3 kulüp seçkisi, 7 senaryo). Hesapsız, 4 karakterlik oda koduyla 2 ayrı cihazdan online oynanabiliyor.',
     tech: ['HTML', 'CSS', 'JavaScript', 'MQTT', 'Vercel'],
     live: 'https://secmece-bid-savasi.vercel.app',
     preview: '/previews/secmece.webp',
@@ -79,7 +79,7 @@ const projects = [
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
     live: 'https://freshy-five.vercel.app',
     preview: '/previews/freshy.webp',
-    github: 'https://github.com/erenpinyall/grocery-delivery-platform',
+    github: 'https://github.com/erenpinyall/freshy',
   },
   {
     name: 'rag-pdf',
@@ -90,11 +90,11 @@ const projects = [
     github: 'https://github.com/erenpinyall/rag-pdf',
   },
   {
-    name: 'gitstats',
+    name: 'yıldızname',
     year: '2026',
-    desc: 'GitHub kullanıcılarının profillerini derinlemesine analiz eden interaktif web uygulaması. Profil skoru, teknoloji dağılımı, aktivite ısı haritası ve AI destekli analiz. Scroll animasyonları, 3D kart efektleri ve animasyonlu gradient arka plan ile zenginleştirilmiş modern arayüz.',
-    tech: ['React', 'JavaScript', 'Recharts', 'Chart.js', 'Framer Motion', 'GitHub API'],
-    live: 'https://gitstats-three.vercel.app',
+    desc: 'Bir GitHub profilini gece göğü estetiğinde tek sayfada okuyan Türkçe profil analizi. Parlaklık skoru, seri, dil kompozisyonu, repo kataloğu, 52 haftalık ısı haritası ve kural tabanlı okuma. Hesap veya veritabanı yok.',
+    tech: ['React', 'JavaScript', 'Recharts', 'Framer Motion', 'GitHub API'],
+    live: 'https://yzname.vercel.app',
     preview: '/previews/gitstats.webp',
     github: 'https://github.com/erenpinyall/gitstats',
   },
