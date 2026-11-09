@@ -1,63 +1,107 @@
 <div align="center">
 
-# Eren Pinyal — Portfolio
+# Eren Pinyal — Selected Works
 
-**React, Framer Motion ve modern tasarım ile hazırlanmış kişisel portfolio sitesi.**
+**Portfolyo, eşit kartlardan oluşan bir vitrin değil; küratörlü bir sergi duvarı.**
 
-[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-05F?style=flat&logo=framer&logoColor=white)](https://www.framer.com/motion)
+Sekiz iş, altı canlı demo, EN/TR ve açık/kapalı galeri ışıkları.
+React 19 · Vite · Framer Motion · CSS custom properties · Vercel
+
+[![Live](https://img.shields.io/badge/LIVE-erenpinyal.com-191714?style=for-the-badge)](https://erenpinyal.com)
+[![React](https://img.shields.io/badge/React_19-61DAFB?style=flat\&logo=react\&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite_8-646CFF?style=flat\&logo=vite\&logoColor=white)](https://vite.dev)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat\&logo=vercel\&logoColor=white)](https://vercel.com)
+
+[Canlı site](https://erenpinyal.com) · [CV](https://erenpinyal.com/cv.pdf) · [LinkedIn](https://www.linkedin.com/in/eren-pinyal) · [GitHub](https://github.com/erenpinyall)
+
+<img src="public/og.png" alt="Selected Works — koyu başlıklı, krem galeri duvarı üzerinde çerçeveli işler" width="100%" />
 
 </div>
 
----
+## Fikir
 
-## Hakkında
+Portfolyo bir sergi kataloğu gibi okunur: işler farklı ölçeklerde asılır, her birinin numarası, yılı, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; malzeme dizini teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
 
-Bilgisayar Mühendisliği mezunu olarak projelerimi, deneyimlerimi ve yeteneklerimi sergileyen interaktif bir portfolio sitesi. İki panelli layout, scroll animasyonları ve temiz bir tasarım.
+- **Sergi duvarı:** 7/5, 4/4/4, 5/3/4'lük asimetrik asma; eşit kart ızgarası yok.
+- **Duvar etiketleri:** yıl, teknoloji, kısa açıklama, canlı demo ve repo bağlantısı.
+- **Spotlight:** bir çerçeveye gelince diğerleri 0.52 opaklığa iner; imleç yoksa duvar bütün kalır.
+- **Işıklar:** krem galeri (`#F4F1EA`) ile gece modu (`#12100E`) arasında gerçek bir renk inversiyonu; tercih `localStorage`'da kalır.
+- **EN/TR:** her metin tek kaynaktan gelir; dil değişince başlık, `lang`, etiketler ve içerik birlikte değişir.
+- **Erişilebilirlik:** klavye odağı, `aria-pressed`, `aria-current="location"`, skip link, reduced-motion desteği; Axe'te 0 ihlal.
 
-## Özellikler
+## Sergideki işler
 
-- **İki Panelli Layout** — Sol panel sabit (about + skills), sağ panel scroll ediliyor (experience + projects)
-- **Typing Animasyonu** — Isimler arası geçiş yapan dinamik yazı efekti
-- **Scroll Animasyonları** — Framer Motion ile sıralı giriş animasyonları
-- **Hover Efektleri** — Timeline dot'ları, tag'ler, kartlar ve linkler üzerinde interaktif efektler
-- **Responsive** — Desktop'ta split layout, mobilde tek kolon
-- **Açık Tema** — Temiz, minimal tasarım
+| # | İş | Ne | Canlı | Kod |
+|---|----|----|:-----:|:---:|
+| 01 | **Freshy** | 66 ürünlü market ve teslimat demosu | [Aç](https://freshy-five.vercel.app) | [Repo](https://github.com/erenpinyall/freshy) |
+| 02 | **GitStats** | Kural tabanlı GitHub profil analizi | [Aç](https://yzname.vercel.app) | [Repo](https://github.com/erenpinyall/gitstats) |
+| 03 | **Nabız** | Ekip ve görev yönetim sistemi | [Demo](https://nabiz-demo.vercel.app/demo) | [Repo](https://github.com/erenpinyall/proje-yonetim-sistemi) |
+| 04 | **Seçmece — Takım Savaşı** | Kart açık artırmasına dayalı iki takımlı oyun | [Aç](https://secmece-bid-savasi.vercel.app) | [Repo](https://github.com/erenpinyall/secmece-bid-savasi) |
+| 05 | **Mecrenas** | League of Legends koçu için kişisel site | [Aç](https://mecrenas.vercel.app) | [Repo](https://github.com/erenpinyall/mecrenas) |
+| 06 | **Reno Bayi** | Araç satış ve filo yönetim paneli | [Aç](https://reno-bayi.vercel.app) | — |
+| 07 | **rag-pdf** | PDF üzerinden soru-cevap için RAG deneyi | — | [Repo](https://github.com/erenpinyall/rag-pdf) |
+| 08 | **Finance Tracker** | 33 testli kişisel finans takibi | — | [Repo](https://github.com/erenpinyall/finance-tracker) |
 
-## Tech Stack
+> Reno Bayi'nin deposu özel olduğu için kod bağlantısı yok. Demo ürünlerde örnek veriler kullanılır; gerçek ödeme veya üretim verisi işlenmez.
 
-| Katman | Teknoloji |
-|--------|-----------|
-| Frontend | React 19, Vite |
-| Animasyonlar | Framer Motion |
-| Stillendirme | CSS (Custom Properties) |
-| Font | Inter (Google Fonts) |
+## Teknoloji
 
-## Bölümler
+| Katman | Seçim |
+|--------|-------|
+| Arayüz | React 19, Vite 8 |
+| Hareket | Framer Motion (scroll reveal, spotlight, tema geçişi) |
+| Stil | CSS custom properties; tek dosyada token'lar, ayrı dosyada kompozisyon |
+| Tipografi | Archivo (display/UI), Spectral (katalog metni) — Google Fonts |
+| İkonlar | react-icons (marka ikonları) + elle çizilmiş SVG plate'ler |
+| Yayın | Vercel, `master` dalından otomatik |
 
-- **About** — İsim, bio ve typing animasyonu
-- **Skills** — Kategorilere ayrılmış teknoloji tag'leri
-- **Experience** — İnteraktif dot'lu iş deneyimi timeline'ı
-- **Projects** — yaptığım projeler, açıklama, tech tag'leri ve GitHub linkleri
-- **Contact** — Email, LinkedIn ve GitHub linkleri
+## Yerel geliştirme
 
-## Öne Çıkan Projeler
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # dist/
+npm run preview  # üretim önizlemesi
+npm run lint     # oxlint
+```
 
-- **Nabız** — küçük ekipler için canlı proje ve görev panosu · [interaktif demo](https://nabiz-demo.vercel.app/demo)
-- **Seçmece — Takım Savaşı** — kart açık artırması tabanlı iki takımlı oyun · [canlı](https://secmece-bid-savasi.vercel.app)
-- **Freshy** — 66 ürünlü full-stack market ve teslimat demosu · [canlı](https://freshy-five.vercel.app)
-- **GitStats / Yıldızname** — GitHub profil analizi · [canlı](https://yzname.vercel.app)
-- **Mecrenas** — League of Legends koçu için kişisel site · [canlı](https://mecrenas.vercel.app)
-- **Reno Bayi** — araç satış ve filo yönetim sistemi · [canlı](https://reno-bayi.vercel.app)
+## Yapı
 
-> Demo projelerde örnek veriler kullanılır; gerçek ödeme, teslimat veya üretim verisi işlenmez.
+```text
+src/
+  content.js              tüm EN/TR metinleri, projeler, deneyim, linkler
+  App.jsx                 sayfa kompozisyonu, dil/tema, aktif bölüm
+  App.css                 galeri duvarı, çerçeveler, etiketler, responsiv
+  index.css               token'lar, tipografi, focus, scrollbar, dark mode
+  components/
+    Header.jsx            kelime markası, oda linkleri, ışıklar, dil
+    ExhibitFrame.jsx      çerçeve + duvar etiketi + canlı/repo linkleri
+    Plate.jsx             sekiz adet düz SVG arayüz etüdü
+    FloorPlan.jsx         kat planı ve "buradasın" işareti
+    SectionHead.jsx       numara + başlık + not
+    SkillIndex.jsx        beş malzeme grubu
+    Chronology.jsx        iki staj
+public/
+  cv.pdf                  indirilebilir CV
+  og.png                  canlı sayfadan alınan 1200×630 link önizlemesi
+DESIGN.md                 token'lar, tipografi, bileşenler, kararlar
+PRODUCT.md                ürün bağlamı ve kısıtlar
+```
+
+## Dürüstlük notları
+
+- Duvar plate'leri ekran görüntüsü değil, elle çizilmiş **arayüz etütleridir**; arayüzde bu şekilde etiketlenir.
+- GitStats adı korunur; canlı adres `yzname.vercel.app`.
+- Nabız bir proje yönetim sistemidir; demo örnek veriyle çalışır.
+- Uydurma metrik, müşteri adı veya referans yoktur.
+- Tasarım kararları ve ölçümler için [DESIGN.md](DESIGN.md).
 
 ---
 
 <div align="center">
 
-[![Live](https://img.shields.io/badge/LIVE-erenpinyal.com-black?style=for-the-badge)](https://erenpinyal.com)
 [![GitHub](https://img.shields.io/badge/GitHub-erenpinyall-181717?style=for-the-badge&logo=github)](https://github.com/erenpinyall)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-eren--pinyal-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eren-pinyal)
+[![Email](https://img.shields.io/badge/Email-erenpinyal122%40gmail.com-C8321E?style=for-the-badge&logo=gmail&logoColor=white)](mailto:erenpinyal122@gmail.com)
 
 </div>
