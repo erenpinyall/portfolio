@@ -185,17 +185,17 @@
   display: block;
 }
 
-.hero-years {
-  margin-top: 24px;
+.hero-role {
+  margin-top: 20px;
   color: var(--ink-soft);
   font-family: 'Spectral', Georgia, serif;
-  font-size: clamp(22px, 2.3vw, 32px);
+  font-size: clamp(20px, 2.1vw, 28px);
   font-style: italic;
 }
 
 .hero-intro {
   max-width: 44ch;
-  margin-top: 26px;
+  margin-top: 20px;
   color: var(--ink-soft);
   font-family: 'Spectral', Georgia, serif;
   font-size: 17px;
@@ -447,10 +447,16 @@
   aspect-ratio: 4 / 3;
 }
 
-.plate-svg {
+.plate-svg,
+.plate-img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.plate-img {
+  object-fit: cover;
+  object-position: top center;
 }
 
 .plate-open {
@@ -568,24 +574,28 @@
 
 .materials {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .material-group {
-  padding: 26px 22px 32px;
-  background: var(--wall);
-  transition: background-color 0.35s ease;
+  padding: 22px 24px 26px;
+  background: var(--wall-raised);
+  border: 1px solid var(--line);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
+}
+
+.material-group:last-child {
+  grid-column: 1 / -1;
 }
 
 .material-head {
   display: flex;
   align-items: baseline;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
 }
 
 .material-num {
@@ -596,52 +606,76 @@
 }
 
 .material-head h3 {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.material-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
 .material-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 16px 12px;
 }
 
-.material-list li {
+.material-item {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink-soft);
-  font-size: 13px;
+  flex-direction: column;
+  gap: 8px;
+  width: 64px;
 }
 
-.specimen {
+.tech-tile {
   display: grid;
-  flex: 0 0 auto;
   place-items: center;
-  width: 22px;
-  height: 22px;
+  width: 64px;
+  height: 64px;
   background: var(--chip-bg);
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  transition: transform 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
 }
 
-.specimen svg {
-  opacity: 0.5;
-  filter: grayscale(1);
-  transition: opacity 0.25s ease, filter 0.25s ease;
+.tech-tile.has-brand {
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
-.material-group:hover .specimen svg {
-  opacity: 1;
-  filter: none;
+.tech-tile--mono {
+  background: var(--wall-raised);
 }
 
-.tech-dot {
-  display: block;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0.5;
+.tech-tile--mono span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.material-name {
+  color: var(--ink-soft);
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.material-item:hover .tech-tile {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  filter: saturate(1.08);
+}
+
+.material-item:hover .material-name {
+  color: var(--ink);
 }
 
 /* ---------- Chronology ---------- */
@@ -858,12 +892,6 @@
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 1120px) {
-  .materials {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
@@ -901,6 +929,14 @@
 
   .exhibit.is-dropped {
     margin-top: 0;
+  }
+
+  .materials {
+    grid-template-columns: 1fr;
+  }
+
+  .material-group:last-child {
+    grid-column: auto;
   }
 
   .section {
@@ -968,10 +1004,6 @@
 
   .exhibit--wall:first-child {
     grid-column: auto;
-  }
-
-  .materials {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .entry {
@@ -1043,8 +1075,21 @@
     padding: 56px 0;
   }
 
-  .materials {
-    grid-template-columns: 1fr;
+  .section-title {
+    font-size: clamp(25px, 8vw, 30px);
+  }
+
+  .material-item {
+    width: 58px;
+  }
+
+  .tech-tile {
+    width: 58px;
+    height: 58px;
+  }
+
+  .material-name {
+    font-size: 10px;
   }
 
   .door {

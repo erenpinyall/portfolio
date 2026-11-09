@@ -8,33 +8,18 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiPython,
-  SiFastapi,
-  SiOllama,
-  SiLangchain,
-  SiChartdotjs,
   SiGithub,
   SiVite,
-  SiFramer,
-  SiCss,
   SiOpenjdk,
   SiSpringboot,
-  SiSpring,
-  SiJunit5,
-  SiApachemaven,
-  SiScikitlearn,
-  SiPandas,
-  SiHibernate,
   SiMysql,
-  SiDotnet,
   SiJsonwebtokens,
   SiDocker,
   SiGit,
   SiNextdotjs,
   SiRedis,
   SiC,
-  SiHtml5,
-  SiMqtt,
-  SiVercel,
+  SiApachemaven,
 } from 'react-icons/si';
 
 const CSharpIcon = ({ size }) => (
@@ -55,33 +40,31 @@ const brandColors = {
   JavaScript: '#F7DF1E',
   'JavaScript (ES6+)': '#F7DF1E',
   'Node.js': '#5FA04E',
+  Express: '#000000',
+  Prisma: '#2D3748',
+  'Prisma ORM': '#2D3748',
   PostgreSQL: '#4169E1',
   'Tailwind CSS': '#06B6D4',
   Python: '#3776AB',
-  FastAPI: '#009688',
-  'Chart.js': '#FF6384',
-  Vite: '#646CFF',
-  CSS: '#663399',
+  'Next.js': '#000000',
+  SQL: '#4B6478',
+  'SQL Server': '#CC2927',
+  'Microsoft SQL Server': '#CC2927',
   Java: '#437291',
   'Spring Boot': '#6DB33F',
-  'Spring Data JPA': '#6DB33F',
-  'JUnit 5': '#25A162',
-  JUnit: '#25A162',
   Maven: '#C71A36',
   'C#': '#68217A',
   'ASP.NET Core': '#512BD4',
-  'Entity Framework Core': '#512BD4',
   Docker: '#2496ED',
-  'Scikit-learn': '#F7931E',
-  Hibernate: '#59666C',
   MySQL: '#4479A1',
   Git: '#F05032',
+  GitHub: '#181717',
   'VS Code': '#007ACC',
   Redis: '#FF4438',
   C: '#A8B9CC',
-  HTML: '#E34F26',
-  MQTT: '#660066',
-  Vercel: '#000000',
+  JWT: '#000000',
+  'JWT Auth': '#000000',
+  Vite: '#646CFF',
 };
 
 const icons = {
@@ -96,46 +79,70 @@ const icons = {
   PostgreSQL: SiPostgresql,
   'Tailwind CSS': SiTailwindcss,
   Python: SiPython,
-  FastAPI: SiFastapi,
-  Ollama: SiOllama,
-  LangChain: SiLangchain,
-  'Chart.js': SiChartdotjs,
-  'GitHub API': SiGithub,
-  GitHub: SiGithub,
-  Vite: SiVite,
-  'Framer Motion': SiFramer,
-  CSS: SiCss,
   Java: SiOpenjdk,
   'Spring Boot': SiSpringboot,
-  'Spring Data JPA': SiSpring,
-  'JUnit 5': SiJunit5,
-  JUnit: SiJunit5,
   Maven: SiApachemaven,
   'C#': CSharpIcon,
-  'ASP.NET Core': SiDotnet,
-  'Entity Framework Core': SiDotnet,
-  JWT: SiJsonwebtokens,
-  'JWT Auth': SiJsonwebtokens,
   Docker: SiDocker,
-  'Scikit-learn': SiScikitlearn,
-  Pandas: SiPandas,
-  Hibernate: SiHibernate,
   MySQL: SiMysql,
   Git: SiGit,
-  'Next.js': SiNextdotjs,
+  GitHub: SiGithub,
+  'VS Code': VSCodeIcon,
   Redis: SiRedis,
   C: SiC,
-  HTML: SiHtml5,
-  MQTT: SiMqtt,
-  Vercel: SiVercel,
-  'VS Code': VSCodeIcon,
+  JWT: SiJsonwebtokens,
+  'JWT Auth': SiJsonwebtokens,
+  Vite: SiVite,
+  'Next.js': SiNextdotjs,
 };
 
-export default function TechIcon({ name, size = 12 }) {
+const monograms = {
+  SQL: 'SQL',
+  'SQL Server': 'SQL',
+  'Microsoft SQL Server': 'SQL',
+  Responsive: 'RWD',
+  'REST API': 'API',
+};
+
+function inkFor(hex) {
+  const value = hex.replace('#', '');
+  if (value.length !== 6) return '#FFFFFF';
+  const [r, g, b] = [0, 2, 4]
+    .map((offset) => parseInt(value.slice(offset, offset + 2), 16) / 255)
+    .map((channel) =>
+      channel <= 0.04045 ? channel / 12.92 : Math.pow((channel + 0.055) / 1.055, 2.4),
+    );
+  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  return luminance > 0.35 ? '#191714' : '#FFFFFF';
+}
+
+function monogramFor(name) {
+  return monograms[name] ?? name.replace(/[^A-Za-z0-9]/g, '').slice(0, 3).toUpperCase();
+}
+
+export default function TechTile({ name, size = 30 }) {
   const Icon = icons[name];
+  const brand = brandColors[name];
+
   if (!Icon) {
-    return <span className="tech-dot" style={{ width: size, height: size }} />;
+    return (
+      <span
+        className={`tech-tile tech-tile--mono${brand ? ' has-brand' : ''}`}
+        style={brand ? { background: brand, color: inkFor(brand) } : undefined}
+        aria-hidden="true"
+      >
+        <span>{monogramFor(name)}</span>
+      </span>
+    );
   }
-  const color = brandColors[name];
-  return <Icon size={size} style={color ? { color } : undefined} />;
+
+  return (
+    <span
+      className={`tech-tile${brand ? ' has-brand' : ''}`}
+      style={brand ? { background: brand, color: inkFor(brand) } : undefined}
+      aria-hidden="true"
+    >
+      <Icon size={size} />
+    </span>
+  );
 }

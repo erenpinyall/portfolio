@@ -43,9 +43,9 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = lang === 'tr' ? 'Eren Pinyal — Seçili İşler' : 'Eren Pinyal — Selected Works';
+    document.title = t.head.docTitle;
     localStorage.setItem('lang', lang);
-  }, [lang]);
+  }, [lang, t.head.docTitle]);
 
   useEffect(() => {
     const ids = ['works', 'skills', 'experience', 'contact'];
@@ -92,7 +92,7 @@ export default function App() {
               <span>{t.head.title[0]}</span>
               <span>{t.head.title[1]}</span>
             </h1>
-            <p className="hero-years">2024 — 2026</p>
+            <p className="hero-role">{t.head.role}</p>
             <p className="hero-intro">{t.head.intro}</p>
             <div className="hero-actions">
               <a className="action action--red" href="#contact">
@@ -198,9 +198,7 @@ export default function App() {
           Eren Pinyal
         </div>
         <div className="footer-row">
-          <span>
-            {t.footer.place} · 2026
-          </span>
+          <span>{t.footer.place}</span>
           <span>{t.footer.colophon}</span>
           <a href="#top">
             {t.footer.top} <span aria-hidden="true">↑</span>

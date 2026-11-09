@@ -23,13 +23,13 @@ Success means a first-time visitor understands the profile, sees at least one cr
 
 ## Positioning
 
-Full-stack breadth backed by working, deployed software: embedded C and hardware diagnostics at one end, Java/Spring and .NET backends in the middle, React/TypeScript frontends and Python ML/NLP at the other — with multiple live demos a visitor can open immediately, not screenshots.
+Full-stack breadth backed by working, deployed software: embedded C and hardware diagnostics at one end, Java/Spring and .NET backends in the middle, React/TypeScript frontends and Python ML/NLP at the other — with multiple live demos a visitor can open immediately, shown through real product screenshots.
 
 ## Operating Context
 
 - Evaluated in short sessions, often on mobile, from a CV, LinkedIn, or GitHub link.
 - Primary public surfaces: `erenpinyal.com` (Vercel), `github.com/erenpinyall`, LinkedIn (`/in/eren-pinyal`), email `erenpinyal122@gmail.com`, CV at `/cv.pdf`.
-- Content is authored in `src/App.jsx` as static data; no CMS or backend.
+- Content is authored in `src/content.js` as static data; no CMS or backend.
 - Existing light/dark theme toggle and smooth-scroll navigation are established behavior.
 - Bilingual English/Turkish presentation is a confirmed requirement; the current site mixes English headings with Turkish project descriptions and must become consistent.
 
@@ -37,21 +37,21 @@ Full-stack breadth backed by working, deployed software: embedded C and hardware
 
 - React 19 + Vite single-page app, Framer Motion animations, react-icons brand icons, CSS custom properties; deployed on Vercel.
 - No backend, no analytics, no contact form service — contact is mailto/LinkedIn/GitHub.
-- Must stay fast and responsive; current assets include a CV PDF, favicon, and hero image.
-- **Undecided (do not invent):** exact mapping between the live demo URLs in README.md (Nabız, Seçmece, Freshy, GitStats/Yıldızname, Mecrenas, Reno Bayi) and the project entries listed in `src/App.jsx`; tech stacks for Mecrenas, Seçmece, Reno Bayi, and Nabız are not recorded in the repo.
+- Must stay fast and responsive; current assets include the CV PDF, favicon, six product screenshots in `public/previews`, and the OG image.
+- Live URL and stack mapping now lives in `src/content.js`; Mecrenas, Seçmece, Reno Bayi, and Nabız are represented there. Do not add stacks that are not recorded.
 
 ## Brand Commitments
 
-- Name: Eren Pinyal; existing lowercase wordmark treatment ("eren pinyal").
+- Name: Eren Pinyal; the name is the `h1`, and the header wordmark keeps the same identity.
 - Domain `erenpinyal.com`; existing GitHub, LinkedIn, email, and CV links must remain reachable.
 - Turkish/English toggle confirmed by the user for this redesign.
 
 ## Evidence on Hand
 
-- `README.md` features six live projects with URLs: Nabız, Seçmece — Takım Savaşı, Freshy, GitStats/Yıldızname, Mecrenas, Reno Bayi.
-- `src/App.jsx` contains detailed entries (description, stack, GitHub) for proje yönetim sistemi, freshy, rag-pdf, gitstats, portfolio, finance tracker, vehicle rental management system, Turkish cyberbullying detection, library management system.
+- `src/content.js` contains the eight current works: Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, rag-pdf, and Finance Tracker.
+- Six live projects have URLs and real screenshots: Nabız, Seçmece — Takım Savaşı, Freshy, GitStats, Mecrenas, Reno Bayi. GitStats is live at `yzname.vercel.app`; Reno Bayi's repository is private.
 - Two real internships: demiraysoft (web developer, Aug–Sep 2025) and enel enerji (IT support, Aug–Sep 2024).
-- CV PDF at `public/cv.pdf`.
+- CV PDF at `public/cv.pdf`, sourced from `ErenPinyalCV.pdf`.
 - Must not fabricate testimonials, benchmarks, client names, or metrics beyond what the repo states (e.g., 85.39% cyberbullying model accuracy is recorded; 33 tests for finance tracker is recorded).
 
 ## Product Principles

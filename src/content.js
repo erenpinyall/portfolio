@@ -9,8 +9,12 @@ export const projects = [
   {
     id: 'freshy',
     name: 'Freshy',
-    year: '2026',
     plate: 'freshy',
+    preview: '/previews/freshy.webp',
+    previewAlt: {
+      en: 'Screenshot of the Freshy web app.',
+      tr: 'Freshy web uygulamasının ekran görüntüsü.',
+    },
     live: 'https://freshy-five.vercel.app',
     repo: 'https://github.com/erenpinyall/freshy',
     stack: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
@@ -24,8 +28,12 @@ export const projects = [
   {
     id: 'gitstats',
     name: 'GitStats',
-    year: '2026',
     plate: 'gitstats',
+    preview: '/previews/gitstats.webp',
+    previewAlt: {
+      en: 'Screenshot of the GitStats web app.',
+      tr: 'GitStats web uygulamasının ekran görüntüsü.',
+    },
     live: 'https://yzname.vercel.app',
     repo: 'https://github.com/erenpinyall/gitstats',
     stack: ['React', 'JavaScript', 'Recharts', 'Chart.js', 'GitHub API'],
@@ -39,8 +47,12 @@ export const projects = [
   {
     id: 'nabiz',
     name: 'Nabız',
-    year: '2026',
     plate: 'nabiz',
+    preview: '/previews/nabiz.webp',
+    previewAlt: {
+      en: 'Screenshot of the Nabız project board.',
+      tr: 'Nabız proje panosunun ekran görüntüsü.',
+    },
     live: 'https://nabiz-demo.vercel.app/demo',
     repo: 'https://github.com/erenpinyall/proje-yonetim-sistemi',
     stack: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SignalR', 'React', 'TypeScript', 'JWT Auth'],
@@ -54,8 +66,12 @@ export const projects = [
   {
     id: 'secmece',
     name: 'Seçmece — Takım Savaşı',
-    year: '2026',
     plate: 'secmece',
+    preview: '/previews/secmece.webp',
+    previewAlt: {
+      en: 'Screenshot of the Seçmece card game.',
+      tr: 'Seçmece kart oyununun ekran görüntüsü.',
+    },
     live: 'https://secmece-bid-savasi.vercel.app',
     repo: 'https://github.com/erenpinyall/secmece-bid-savasi',
     stack: ['JavaScript', 'HTML', 'CSS', 'MQTT'],
@@ -69,8 +85,12 @@ export const projects = [
   {
     id: 'mecrenas',
     name: 'Mecrenas',
-    year: '2026',
     plate: 'mecrenas',
+    preview: '/previews/mecrenas.webp',
+    previewAlt: {
+      en: 'Screenshot of the Mecrenas coaching site.',
+      tr: 'Mecrenas koçluk sitesinin ekran görüntüsü.',
+    },
     live: 'https://mecrenas.vercel.app',
     repo: 'https://github.com/erenpinyall/mecrenas',
     stack: ['HTML', 'CSS', 'JavaScript'],
@@ -84,8 +104,12 @@ export const projects = [
   {
     id: 'reno',
     name: 'Reno Bayi',
-    year: '2026',
     plate: 'reno',
+    preview: '/previews/reno-bayi.webp',
+    previewAlt: {
+      en: 'Screenshot of the Reno Bayi vehicle dashboard.',
+      tr: 'Reno Bayi araç panelinin ekran görüntüsü.',
+    },
     live: 'https://reno-bayi.vercel.app',
     repo: null,
     stack: ['React', 'TypeScript', 'Zustand', 'Tailwind CSS', 'Vite', 'Tauri'],
@@ -99,7 +123,6 @@ export const projects = [
   {
     id: 'rag-pdf',
     name: 'rag-pdf',
-    year: '2026',
     plate: 'ragpdf',
     repo: 'https://github.com/erenpinyall/rag-pdf',
     live: null,
@@ -114,7 +137,6 @@ export const projects = [
   {
     id: 'finance',
     name: 'Finance Tracker',
-    year: '2026',
     plate: 'finance',
     repo: 'https://github.com/erenpinyall/finance-tracker',
     live: null,
@@ -132,22 +154,22 @@ export const skillGroups = [
   {
     key: 'languages',
     label: { en: 'Languages', tr: 'Diller' },
-    items: ['JavaScript (ES6+)', 'TypeScript', 'Python', 'Java', 'C', 'C#', 'SQL'],
+    items: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C', 'C#', 'SQL'],
   },
   {
     key: 'frontend',
     label: { en: 'Frontend', tr: 'Frontend' },
-    items: ['React', 'Next.js', 'Tailwind CSS', 'Responsive Design'],
+    items: ['React', 'Next.js', 'Tailwind CSS', 'Responsive'],
   },
   {
     key: 'backend',
     label: { en: 'Backend', tr: 'Backend' },
-    items: ['Spring Boot', 'Node.js', 'Express', 'REST API', 'JWT Auth'],
+    items: ['Spring Boot', 'Node.js', 'Express', 'REST API', 'JWT'],
   },
   {
     key: 'data',
     label: { en: 'Data', tr: 'Veri' },
-    items: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'Redis', 'Prisma ORM'],
+    items: ['PostgreSQL', 'MySQL', 'SQL Server', 'Redis', 'Prisma'],
   },
   {
     key: 'tools',
@@ -204,10 +226,12 @@ export const copy = {
     lang: 'en',
     head: {
       skip: 'Skip to content',
-      title: ['Selected', 'Works'],
+      title: ['Eren', 'Pinyal'],
+      docTitle: 'Eren Pinyal — Full-Stack Developer',
+      role: 'Full-stack developer',
       intro:
-        'A working exhibition of shipped software. Eight pieces, six live; every frame opens the real thing.',
-      note: 'Wall labels carry the stack and the year. Plates are interface studies, not screenshots.',
+        'I build shipped software. Eight pieces below, six live; every frame opens the real thing.',
+      note: 'Live works use product screenshots; the two repository pieces use interface studies.',
       youAreHere: 'You are here',
     },
     nav: { works: 'Works', skills: 'Skills', experience: 'Experience', contact: 'Contact' },
@@ -217,6 +241,8 @@ export const copy = {
       github: 'GitHub',
       live: 'Live demo',
       repo: 'Repository',
+      liveTag: 'Live',
+      repoTag: 'Repo',
       lightsOn: 'Lights on',
       lightsOff: 'Lights off',
       lights: 'Lights',
@@ -233,8 +259,8 @@ export const copy = {
     },
     skills: {
       index: '02',
-      title: 'Materials & techniques',
-      note: 'The medium list, kept honest: what I actually reach for, grouped by material.',
+      title: 'Languages & frameworks',
+      note: 'What I actually build with, grouped by layer.',
     },
     experience: {
       index: '03',
@@ -261,10 +287,12 @@ export const copy = {
     lang: 'tr',
     head: {
       skip: 'İçeriğe geç',
-      title: ['Seçili', 'İşler'],
+      title: ['Eren', 'Pinyal'],
+      docTitle: 'Eren Pinyal — Full-Stack Geliştirici',
+      role: 'Full-stack geliştirici',
       intro:
-        'Yayına alınmış yazılımlardan çalışan bir sergi. Sekiz iş, altısı canlı; her çerçeve gerçeğini açar.',
-      note: 'Duvar etiketleri stack’i ve yılı taşır. Görseller birer arayüz etüdü; ekran görüntüsü değil.',
+        'Yayına alınmış yazılımlar üretiyorum. Aşağıda sekiz iş, altısı canlı; her çerçeve gerçeğini açar.',
+      note: 'Canlı işler ürün ekran görüntüleriyle; iki depo işi arayüz etüdüyle gösterilir.',
       youAreHere: 'Buradasın',
     },
     nav: { works: 'İşler', skills: 'Yetenekler', experience: 'Deneyim', contact: 'İletişim' },
@@ -274,6 +302,8 @@ export const copy = {
       github: 'GitHub',
       live: 'Canlı demo',
       repo: 'Depo',
+      liveTag: 'Canlı',
+      repoTag: 'Depo',
       lightsOn: 'Işıklar açık',
       lightsOff: 'Işıklar kapalı',
       lights: 'Işıklar',
@@ -290,8 +320,8 @@ export const copy = {
     },
     skills: {
       index: '02',
-      title: 'Malzeme ve teknik',
-      note: 'Dürüst malzeme listesi: gerçekten kullandıklarım, türlerine göre.',
+      title: "Diller ve framework'ler",
+      note: 'Gerçekten kullandığım stack, katmanlara göre.',
     },
     experience: {
       index: '03',

@@ -1,10 +1,10 @@
 <div align="center">
 
-# Eren Pinyal — Selected Works
+# Eren Pinyal — Full-Stack Developer
 
-**Portfolyo, eşit kartlardan oluşan bir vitrin değil; küratörlü bir sergi duvarı.**
+**Kişisel portfolyo ve CV sitesi; eşit kartlardan oluşan bir vitrin değil, küratörlü bir sergi duvarı.**
 
-Sekiz iş, altı canlı demo, EN/TR ve açık/kapalı galeri ışıkları.
+Sekiz iş, altı canlı demo, gerçek ürün ekran görüntüleri, EN/TR ve açık/kapalı galeri ışıkları.
 React 19 · Vite · Framer Motion · CSS custom properties · Vercel
 
 [![Live](https://img.shields.io/badge/LIVE-erenpinyal.com-191714?style=for-the-badge)](https://erenpinyal.com)
@@ -14,16 +14,18 @@ React 19 · Vite · Framer Motion · CSS custom properties · Vercel
 
 [Canlı site](https://erenpinyal.com) · [CV](https://erenpinyal.com/cv.pdf) · [LinkedIn](https://www.linkedin.com/in/eren-pinyal) · [GitHub](https://github.com/erenpinyall)
 
-<img src="public/og.png" alt="Selected Works — koyu başlıklı, krem galeri duvarı üzerinde çerçeveli işler" width="100%" />
+<img src="public/og.png" alt="Eren Pinyal — krem galeri duvarı üzerinde canlı proje ekran görüntüleri" width="100%" />
 
 </div>
 
 ## Fikir
 
-Portfolyo bir sergi kataloğu gibi okunur: işler farklı ölçeklerde asılır, her birinin numarası, yılı, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; malzeme dizini teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
+Portfolyo bir sergi kataloğu gibi okunur: işler farklı ölçeklerde asılır, her birinin numarası, durumu, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; dil ve framework panosu teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
 
 - **Sergi duvarı:** 7/5, 4/4/4, 5/3/4'lük asimetrik asma; eşit kart ızgarası yok.
-- **Duvar etiketleri:** yıl, teknoloji, kısa açıklama, canlı demo ve repo bağlantısı.
+- **Duvar etiketleri:** durum (canlı/depo), teknoloji, kısa açıklama, canlı demo ve repo bağlantısı.
+- **Gerçek görseller:** altı canlı iş, ürünlerin ekran görüntüleriyle; iki depo işi elle çizilmiş arayüz etüdüyle gösterilir.
+- **Yetenek panosu:** beş kategori, 64px marka renkli plakalar ve büyük ikonlar; sade listeye göre çok daha görünür.
 - **Spotlight:** bir çerçeveye gelince diğerleri 0.52 opaklığa iner; imleç yoksa duvar bütün kalır.
 - **Işıklar:** krem galeri (`#F4F1EA`) ile gece modu (`#12100E`) arasında gerçek bir renk inversiyonu; tercih `localStorage`'da kalır.
 - **EN/TR:** her metin tek kaynaktan gelir; dil değişince başlık, `lang`, etiketler ve içerik birlikte değişir.
@@ -52,7 +54,7 @@ Portfolyo bir sergi kataloğu gibi okunur: işler farklı ölçeklerde asılır,
 | Hareket | Framer Motion (scroll reveal, spotlight, tema geçişi) |
 | Stil | CSS custom properties; tek dosyada token'lar, ayrı dosyada kompozisyon |
 | Tipografi | Archivo (display/UI), Spectral (katalog metni) — Google Fonts |
-| İkonlar | react-icons (marka ikonları) + elle çizilmiş SVG plate'ler |
+| İkonlar | react-icons (marka renkli yetenek plakaları) + iki depo için SVG arayüz etüdü |
 | Yayın | Vercel, `master` dalından otomatik |
 
 ## Yerel geliştirme
@@ -76,21 +78,23 @@ src/
   components/
     Header.jsx            kelime markası, oda linkleri, ışıklar, dil
     ExhibitFrame.jsx      çerçeve + duvar etiketi + canlı/repo linkleri
-    Plate.jsx             sekiz adet düz SVG arayüz etüdü
+    Plate.jsx             depo işleri için düz SVG arayüz etütleri
     FloorPlan.jsx         kat planı ve "buradasın" işareti
     SectionHead.jsx       numara + başlık + not
-    SkillIndex.jsx        beş malzeme grubu
+    SkillIndex.jsx        beş kategori ve yetenek plakaları
+    TechTile.jsx          marka renkli ikon plakası / monogram fallback
     Chronology.jsx        iki staj
 public/
-  cv.pdf                  indirilebilir CV
+  cv.pdf                  güncel CV (ErenPinyalCV.pdf)
   og.png                  canlı sayfadan alınan 1200×630 link önizlemesi
+  previews/               altı canlı işin ürün ekran görüntüleri
 DESIGN.md                 token'lar, tipografi, bileşenler, kararlar
 PRODUCT.md                ürün bağlamı ve kısıtlar
 ```
 
 ## Dürüstlük notları
 
-- Duvar plate'leri ekran görüntüsü değil, elle çizilmiş **arayüz etütleridir**; arayüzde bu şekilde etiketlenir.
+- Altı canlı iş gerçek ürün ekran görüntüleriyle gösterilir; yalnızca rag-pdf ve Finance Tracker elle çizilmiş **arayüz etütleridir** ve arayüzde bu şekilde etiketlenir.
 - GitStats adı korunur; canlı adres `yzname.vercel.app`.
 - Nabız bir proje yönetim sistemidir; demo örnek veriyle çalışır.
 - Uydurma metrik, müşteri adı veya referans yoktur.

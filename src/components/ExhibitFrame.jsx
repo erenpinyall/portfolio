@@ -26,8 +26,18 @@ export default function ExhibitFrame({ project, index, lang, t, variant = 'wall'
           rel="noreferrer"
           aria-label={`${project.name} — ${primaryLabel}`}
         >
-          <div className="plate">
-            <Plate kind={project.plate} />
+          <div className={`plate${project.preview ? ' plate--photo' : ''}`}>
+            {project.preview ? (
+              <img
+                className="plate-img"
+                src={project.preview}
+                alt={project.previewAlt[lang]}
+                loading="eager"
+                decoding="async"
+              />
+            ) : (
+              <Plate kind={project.plate} />
+            )}
           </div>
           <span className="plate-open">
             {primaryLabel} <span aria-hidden="true">↗</span>
@@ -38,7 +48,7 @@ export default function ExhibitFrame({ project, index, lang, t, variant = 'wall'
       <div className="wall-label">
         <div className="wall-label-top">
           <span>{number}</span>
-          <span>{project.year}</span>
+          <span>{project.live ? t.ui.liveTag : t.ui.repoTag}</span>
         </div>
         {isWall ? (
           <h3 className="wall-title">{project.name}</h3>
