@@ -23,7 +23,6 @@ export const projects = [
       en: 'A 66-product grocery demo with search, cart, order tracking, auth, admin and courier panels.',
       tr: '66 ürünlü market demosu: arama, sepet, sipariş takibi, yetkilendirme, admin ve kurye panelleri.',
     },
-    layout: { span: 7 },
   },
   {
     id: 'gitstats',
@@ -42,7 +41,6 @@ export const projects = [
       en: 'Turkish GitHub profile analysis: score, streak, language mix, 52-week heatmap, repo catalog.',
       tr: 'Türkçe GitHub profil analizi: skor, seri, dil dağılımı, 52 haftalık ısı haritası, repo kataloğu.',
     },
-    layout: { span: 5 },
   },
   {
     id: 'nabiz',
@@ -61,7 +59,6 @@ export const projects = [
       en: 'Kanban board for small teams: roles, members, comments, and live updates. The demo runs on sample data.',
       tr: 'Küçük ekipler için kanban panosu: roller, üyeler, yorumlar ve canlı güncelleme. Demo örnek veriyle çalışır.',
     },
-    layout: { span: 4, drop: true },
   },
   {
     id: 'secmece',
@@ -80,7 +77,6 @@ export const projects = [
       en: 'Ten cards a round, bid or pass, a blind-bid mode, and 1,411 cards across 36 packs; online rooms take two devices.',
       tr: 'Tur başına on kart, teklif ya da pas, kör teklif modu ve 36 pakette 1.411 kart; online oda iki cihazda.',
     },
-    layout: { span: 4, drop: true },
   },
   {
     id: 'mecrenas',
@@ -99,7 +95,6 @@ export const projects = [
       en: 'One-page site for a League of Legends head coach: team history, packages, courses, FAQ.',
       tr: 'League of Legends baş koçu için tek sayfa: takım geçmişi, paketler, kurslar, SSS.',
     },
-    layout: { span: 4, drop: true },
   },
   {
     id: 'reno',
@@ -118,7 +113,6 @@ export const projects = [
       en: 'Vehicle sales and fleet desk with Excel import/export, reporting, and a Tauri desktop package.',
       tr: 'Excel içe/dışa aktarma ve raporlamayla araç satış ve filo masası; Tauri ile masaüstü paketi.',
     },
-    layout: { span: 5 },
   },
   {
     id: 'portfolio',
@@ -137,7 +131,6 @@ export const projects = [
       en: 'This site: a bilingual exhibition catalog with live demos, real screenshots, and a dark gallery mode.',
       tr: 'Bu site: canlı demolar, gerçek ekran görüntüleri ve gece galeri modu olan iki dilli bir sergi kataloğu.',
     },
-    layout: { span: 7 },
   },
   {
     id: 'rag-pdf',
@@ -151,7 +144,6 @@ export const projects = [
       en: 'Indexes PDFs and answers from the source documents, fully local.',
       tr: 'PDF’leri indeksleyip yanıtı doğrudan belgelerden verir, tamamen yerel.',
     },
-    layout: { span: 5 },
   },
   {
     id: 'finance',
@@ -165,7 +157,6 @@ export const projects = [
       en: 'Budget alerts by email, Excel reporting, and a 33-test suite.',
       tr: 'E-posta bütçe uyarıları, Excel raporlama ve 33 testlik paket.',
     },
-    layout: { span: 7 },
   },
 ];
 
@@ -249,7 +240,7 @@ export const copy = {
       docTitle: 'Eren Pinyal — Full-Stack Developer',
       role: 'Full-stack developer',
       intro:
-        'I build shipped software. Nine pieces below, seven live; every frame opens the real thing.',
+        'I build web products end to end — from the interface to the API and the data underneath.',
       note: 'Live works use product screenshots; the two repository pieces use interface studies.',
       youAreHere: 'You are here',
     },
@@ -274,11 +265,11 @@ export const copy = {
     works: {
       index: '01',
       title: 'Works',
-      note: 'Seven live products and two repositories. The repositories sit behind See more.',
+      note: 'Six live products on the wall; Portfolio and two repositories open with See more.',
       more: 'See more',
       less: 'Show less',
-      moreNote: 'two repository pieces',
-      lessNote: 'repository pieces open',
+      moreNote: 'Portfolio and two repositories',
+      lessNote: 'all works open',
     },
     skills: {
       index: '02',
@@ -314,7 +305,7 @@ export const copy = {
       docTitle: 'Eren Pinyal — Full-Stack Geliştirici',
       role: 'Full-stack geliştirici',
       intro:
-        'Yayına alınmış yazılımlar üretiyorum. Aşağıda dokuz iş, yedisi canlı; her çerçeve gerçeğini açar.',
+        'Arayüzden API’ye ve altındaki veriye kadar web ürünlerini uçtan uca geliştiriyorum.',
       note: 'Canlı işler ürün ekran görüntüleriyle; iki depo işi arayüz etüdüyle gösterilir.',
       youAreHere: 'Buradasın',
     },
@@ -339,11 +330,11 @@ export const copy = {
     works: {
       index: '01',
       title: 'İşler',
-      note: 'Yedi canlı ürün, iki depo. Depolar "Daha fazla" altında.',
+      note: 'Duvarda altı canlı ürün; Portfolio ve iki depo "Daha fazla" ile açılır.',
       more: 'Daha fazla',
       less: 'Daha az göster',
-      moreNote: 'iki depo işi',
-      lessNote: 'depo işleri açık',
+      moreNote: 'Portfolio ve iki depo',
+      lessNote: 'tüm işler açık',
     },
     skills: {
       index: '02',

@@ -405,15 +405,9 @@
 /* ---------- Frames & labels ---------- */
 
 .exhibit {
+  display: flex;
   min-width: 0;
-}
-
-.exhibit--wall {
-  grid-column: span var(--span, 4);
-}
-
-.exhibit.is-dropped {
-  margin-top: clamp(0px, 3vw, 34px);
+  flex-direction: column;
 }
 
 .exhibit-frame {
@@ -499,6 +493,7 @@
 
 .wall-label {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 6px;
   padding-top: 14px;
@@ -531,6 +526,7 @@
 
 .wall-desc {
   max-width: 46ch;
+  min-height: 4.5em;
   color: var(--ink-soft);
   font-family: 'Spectral', Georgia, serif;
   font-size: 13.5px;
@@ -564,10 +560,10 @@
 
 .wall {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: clamp(20px, 2.6vw, 36px);
   row-gap: clamp(40px, 4.5vw, 64px);
-  align-items: start;
+  align-items: stretch;
 }
 
 .wall-more {
@@ -965,18 +961,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .exhibit--wall {
-    grid-column: span 1;
-  }
-
-  .exhibit--wall:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .exhibit.is-dropped {
-    margin-top: 0;
-  }
-
   .materials {
     grid-template-columns: 1fr;
   }
@@ -1046,10 +1030,6 @@
   .wall {
     grid-template-columns: 1fr;
     row-gap: 40px;
-  }
-
-  .exhibit--wall:first-child {
-    grid-column: auto;
   }
 
   .entry {

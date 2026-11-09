@@ -50,7 +50,7 @@ Full-stack breadth backed by working, deployed software: embedded C and hardware
 
 - `src/content.js` contains the nine current works: Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, Portfolio, rag-pdf, and Finance Tracker.
 - Seven live projects have URLs and real screenshots: Nabız, Seçmece — Takım Savaşı, Freshy, GitStats, Mecrenas, Reno Bayi, and Portfolio. Portfolio is this site and uses a self-portrait screenshot. GitStats is live at `yzname.vercel.app`; Reno Bayi's repository is private.
-- The two repository-only works sit behind the See more control so the wall opens with live work first.
+- The wall opens with the first six live works; Portfolio and the two repository-only works sit behind See more.
 - Two real internships: demiraysoft (web developer, Aug–Sep 2025) and enel enerji (IT support, Aug–Sep 2024).
 - CV PDF at `public/cv.pdf`, sourced from `ErenPinyalCV.pdf`.
 - Must not fabricate testimonials, benchmarks, client names, or metrics beyond what the repo states (e.g., 85.39% cyberbullying model accuracy is recorded; 33 tests for finance tracker is recorded).

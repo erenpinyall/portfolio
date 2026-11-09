@@ -20,12 +20,12 @@ React 19 · Vite · Framer Motion · CSS custom properties · Vercel
 
 ## Fikir
 
-Portfolyo bir sergi kataloğu gibi okunur: işler farklı ölçeklerde asılır, her birinin numarası, durumu, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; dil ve framework panosu teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
+Portfolyo bir sergi kataloğu gibi okunur: işler eşit ölçekte asılır, her birinin numarası, durumu, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; dil ve framework panosu teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
 
-- **Sergi duvarı:** 7/5, 4/4/4, 5/7'lik asimetrik asma; eşit kart ızgarası yok.
+- **Sergi duvarı:** üç sütunlu eşit kart ızgarası; masaüstünde üç, tablette iki, mobilde tek sütun.
 - **Duvar etiketleri:** durum (canlı/depo), teknoloji, kısa açıklama, canlı demo ve repo bağlantısı.
 - **Gerçek görseller:** yedi canlı iş, ürünlerin ekran görüntüleriyle; iki depo işi elle çizilmiş arayüz etüdüyle gösterilir.
-- **Daha fazla:** canlı işler açık başlar; iki depo işi tek düğmeyle açılıp kapanır, böylece sayfa dokuz işin tamamıyla uzamaz.
+- **Daha fazla:** ilk altı canlı iş açık başlar; Portfolio ve iki depo işi tek düğmeyle açılıp kapanır, böylece sayfa dokuz işin tamamıyla uzamaz.
 - **Yetenek panosu:** beş kategori, 64px marka renkli plakalar ve büyük ikonlar; sade listeye göre çok daha görünür.
 - **Spotlight:** bir çerçeveye gelince diğerleri 0.52 opaklığa iner; imleç yoksa duvar bütün kalır.
 - **Işıklar:** krem galeri (`#F4F1EA`) ile gece modu (`#12100E`) arasında gerçek bir renk inversiyonu; tercih `localStorage`'da kalır.

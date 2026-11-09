@@ -10,6 +10,7 @@ import Chronology from './components/Chronology';
 import FloorPlan from './components/FloorPlan';
 
 const EASE = [0.2, 0.7, 0.2, 1];
+const INITIAL_WORK_COUNT = 6;
 
 function Reveal({ children, className = '', id }) {
   const reduce = useReducedMotion();
@@ -66,9 +67,9 @@ export default function App() {
 
   const hero = projects[0];
   const second = projects[1];
-  const featuredProjects = projects.filter((project) => project.live);
-  const moreProjects = projects.filter((project) => !project.live);
-  const visibleProjects = showAllWorks ? projects : featuredProjects;
+  const initialProjects = projects.slice(0, INITIAL_WORK_COUNT);
+  const moreProjects = projects.slice(INITIAL_WORK_COUNT);
+  const visibleProjects = showAllWorks ? projects : initialProjects;
 
   return (
     <div className="page" id="top">

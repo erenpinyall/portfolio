@@ -12,8 +12,7 @@ export default function ExhibitFrame({ project, index, lang, t, variant = 'wall'
 
   return (
     <motion.article
-      className={`exhibit exhibit--${variant}${project.layout?.drop && isWall ? ' is-dropped' : ''}`}
-      style={isWall ? { '--span': project.layout?.span ?? 4 } : undefined}
+      className={`exhibit exhibit--${variant}`}
       initial={reduce ? false : { opacity: 0, y: 18 }}
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-8%' }}

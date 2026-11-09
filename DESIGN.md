@@ -50,7 +50,7 @@ Spacing: `--gutter` clamps 20–56px; `--width` 1320px; sections use 108px verti
 
 ## Layout
 
-Twelve-column wall (`--span` per work): Freshy 7 / GitStats 5, Nabız 4 / Seçmece 4 / Mecrenas 4, Reno 5 / Portfolio 7. The two repository pieces, rag-pdf 5 / Finance Tracker 7, appear behind See more. Selected works drop by 34px to break the grid. At 980px the wall becomes two columns and Freshy spans both; at 760px it becomes one column. The hero is 5/7 above 980px and stacks below it.
+Three equal columns at desktop, two at 980px and one at 760px. Every wall plate is 16:10 and every card shares the same column width; there are no per-work spans, drops, or staggered scales. The wall opens with works 01–06; See more adds 07–09 (Portfolio, rag-pdf, Finance Tracker) as a third row. The hero is 5/7 above 980px and stacks below it.
 
 The floor plan is one rule with `Entrance · 01 Works · 02 Skills · 03 Experience · 04 Contact · Exit`, marker under the active room. At ≤620px it becomes a 3×2 grid so nothing is hidden. The mobile header wraps the nav under the wordmark at ≤760px; at ≤380px the nav gap tightens to keep all four links visible at 320px.
 
@@ -70,7 +70,7 @@ The skills section is a specimen board: two columns of category panels above 980
 
 ## Interaction
 
-- **See more.** The wall opens with the seven live works. A ruled control under the wall toggles the two repository pieces, updates `aria-expanded` and its `02` count, and collapses back to the shorter wall.
+- **See more.** The wall opens with works 01–06. A ruled control under the wall toggles the remaining three (Portfolio and the two repository pieces), updates `aria-expanded` and its `03` count, and collapses back to the six-card wall.
 - **Spotlight.** Hovering the wall dims every other frame to 0.52; the hovered frame lifts 3px and darkens its shadow. Focus-within keeps a frame lit. It is a pointer enhancement; touch sees the whole wall.
 - **Lights.** The toggle inverts the wall (not a tint), persists in `localStorage`, updates `color-scheme`, and changes `meta[theme-color]` between `#F4F1EA` and `#12100E`.
 - **Language.** EN/TR swaps every string from `src/content.js`, updates `document.documentElement.lang`, the document title, and persists. Project names keep their original spelling.
@@ -88,7 +88,7 @@ The skills section is a specimen board: two columns of category panels above 980
 
 ## Content rules
 
-- Nine works: seven live (Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, Portfolio) and two repositories (rag-pdf, Finance Tracker). Portfolio is this site and uses a current self-portrait. Reno's repo is private, so it has no GitHub link.
+- Nine works: seven live (Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, Portfolio) and two repositories (rag-pdf, Finance Tracker). The first six live works are visible on load; Portfolio and the two repositories sit behind See more. Portfolio is this site and uses a current self-portrait. Reno's repo is private, so it has no GitHub link.
 - GitStats keeps that name; its live URL is `yzname.vercel.app`. Nabız is the project-management system; its demo uses sample data.
 - No invented metrics, testimonials, or client names. Freshy's 66 products, Finance Tracker's 33 tests, and the recorded model accuracy are the only counts used elsewhere in the product brief.
 - Demo data is labelled; the two interface studies are labelled; the seven live screenshots are real product captures; the OG image is a real capture. There is no 2024–2026 range or project-year label on the site.
