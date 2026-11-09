@@ -1,6 +1,6 @@
 # Design — Eren Pinyal
 
-Eren Pinyal's portfolio is a CV site built as a small exhibition, not a landing-page template. The page is the catalog: eight works hung at varied scale, each with a wall label, a languages-and-frameworks board, a chronology, and a visit panel. English and Turkish are equal views; light is the gallery, dark is after hours.
+Eren Pinyal's portfolio is a CV site built as a small exhibition, not a landing-page template. The page is the catalog: nine works hung at varied scale, each with a wall label, a languages-and-frameworks board, a chronology, and a visit panel. English and Turkish are equal views; light is the gallery, dark is after hours.
 
 The `h1` is **Eren Pinyal**. "Selected Works" is the exhibition metaphor for the wall, not the identity of the site.
 
@@ -13,7 +13,7 @@ The `h1` is **Eren Pinyal**. "Selected Works" is the exhibition metaphor for the
 
 Warm gallery wall, black ink, one vermilion accent, hairline rules, generous margins. Frames are paper mats with a flat offset shadow — the brief's chosen material, not a neobrutalist costume. Depth comes from overlapping flat colour, not gradients or blur. The catalog voice is Spectral; the wall voice is Archivo.
 
-The six live works use real **product screenshots** in `public/previews` (restored from the previous portfolio's preview set), so the wall shows the actual interface. The two repository-only works, rag-pdf and Finance Tracker, keep hand-authored flat SVG **interface studies** and say so in the hero note. `public/og.png` is a 1200×630 crop of the live page captured on 2026-11-09 from `.impeccable/review/desktop.png` for link previews.
+The seven live works use real **product screenshots** in `public/previews` (six restored from the previous portfolio's preview set, plus a current self-portrait of this site), so the wall shows the actual interface. The two repository-only works, rag-pdf and Finance Tracker, keep hand-authored flat SVG **interface studies** and say so in the hero note. `public/og.png` is a 1200×630 crop of the live page captured on 2026-11-09 from `.impeccable/review/desktop.png` for link previews.
 
 ## Tokens
 
@@ -50,7 +50,7 @@ Spacing: `--gutter` clamps 20–56px; `--width` 1320px; sections use 108px verti
 
 ## Layout
 
-Twelve-column wall (`--span` per work): Freshy 7 / GitStats 5, Nabız 4 / Seçmece 4 / Mecrenas 4, Reno 5 / rag-pdf 3 / Finance 4. Selected works drop by 34px to break the grid. At 980px the wall becomes two columns and Freshy spans both; at 760px it becomes one column. The hero is 5/7 above 980px and stacks below it.
+Twelve-column wall (`--span` per work): Freshy 7 / GitStats 5, Nabız 4 / Seçmece 4 / Mecrenas 4, Reno 5 / Portfolio 7. The two repository pieces, rag-pdf 5 / Finance Tracker 7, appear behind See more. Selected works drop by 34px to break the grid. At 980px the wall becomes two columns and Freshy spans both; at 760px it becomes one column. The hero is 5/7 above 980px and stacks below it.
 
 The floor plan is one rule with `Entrance · 01 Works · 02 Skills · 03 Experience · 04 Contact · Exit`, marker under the active room. At ≤620px it becomes a 3×2 grid so nothing is hidden. The mobile header wraps the nav under the wordmark at ≤760px; at ≤380px the nav gap tightens to keep all four links visible at 320px.
 
@@ -70,6 +70,7 @@ The skills section is a specimen board: two columns of category panels above 980
 
 ## Interaction
 
+- **See more.** The wall opens with the seven live works. A ruled control under the wall toggles the two repository pieces, updates `aria-expanded` and its `02` count, and collapses back to the shorter wall.
 - **Spotlight.** Hovering the wall dims every other frame to 0.52; the hovered frame lifts 3px and darkens its shadow. Focus-within keeps a frame lit. It is a pointer enhancement; touch sees the whole wall.
 - **Lights.** The toggle inverts the wall (not a tint), persists in `localStorage`, updates `color-scheme`, and changes `meta[theme-color]` between `#F4F1EA` and `#12100E`.
 - **Language.** EN/TR swaps every string from `src/content.js`, updates `document.documentElement.lang`, the document title, and persists. Project names keep their original spelling.
@@ -81,17 +82,17 @@ The skills section is a specimen board: two columns of category panels above 980
 
 - One `h1`, section `h2`s, work/entry `h3`s. The hero's two previews are labels, not headings, so order stays valid.
 - Skip link to `#works`; visible focus ring; 44px+ practical link rows on touch; the wall frame itself is a large link.
-- `aria-pressed` on Lights; `aria-current="location"` on the floor plan; labelled language group; `aria-label`s on project links include the project name; decorative arrows are `aria-hidden`.
+- `aria-pressed` on Lights; `aria-expanded` on the works toggle, with `aria-controls="works-wall"`; `aria-current="location"` on the floor plan; labelled language group; `aria-label`s on project links include the project name; decorative arrows are `aria-hidden`.
 - Axe (WCAG 2.1 A/AA + best practice) reports 0 violations at 1440×900, 390×844, dark, and Turkish mobile. The only incomplete check is colour contrast on the active floor-plan pseudo-element and decorative arrow glyphs, resolved manually from computed styles.
 - No horizontal overflow at 1440, 1280, 1024, 768, 390, 360, or 320px. The h1 fits its column at every breakpoint.
 
 ## Content rules
 
-- Eight works: six live (Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi) and two repositories (rag-pdf, Finance Tracker). Reno's repo is private, so it has no GitHub link.
+- Nine works: seven live (Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, Portfolio) and two repositories (rag-pdf, Finance Tracker). Portfolio is this site and uses a current self-portrait. Reno's repo is private, so it has no GitHub link.
 - GitStats keeps that name; its live URL is `yzname.vercel.app`. Nabız is the project-management system; its demo uses sample data.
 - No invented metrics, testimonials, or client names. Freshy's 66 products, Finance Tracker's 33 tests, and the recorded model accuracy are the only counts used elsewhere in the product brief.
-- Demo data is labelled; the two interface studies are labelled; the six live screenshots are real product captures; the OG image is a real capture. There is no 2024–2026 range or project-year label on the site.
+- Demo data is labelled; the two interface studies are labelled; the seven live screenshots are real product captures; the OG image is a real capture. There is no 2024–2026 range or project-year label on the site.
 
 ## Build
 
-`npm install`, `npm run dev`, `npm run build`, `npm run preview`, `npm run lint`. Production: Vercel from `master`. Current bundle: 382.1 kB JS (125.8 kB gzip), 16.4 kB CSS (4.0 kB gzip), plus Google Fonts, the CV, and six project previews.
+`npm install`, `npm run dev`, `npm run build`, `npm run preview`, `npm run lint`. Production: Vercel from `master`. Current bundle: 383.6 kB JS (126.3 kB gzip), 17.1 kB CSS (4.1 kB gzip), plus Google Fonts, the CV, and seven project previews.

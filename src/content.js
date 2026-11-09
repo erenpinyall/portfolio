@@ -121,6 +121,25 @@ export const projects = [
     layout: { span: 5 },
   },
   {
+    id: 'portfolio',
+    name: 'Portfolio',
+    plate: 'portfolio',
+    preview: '/previews/portfolio.jpg',
+    previewAlt: {
+      en: 'Screenshot of the Eren Pinyal portfolio site.',
+      tr: 'Eren Pinyal portföy sitesinin ekran görüntüsü.',
+    },
+    live: 'https://erenpinyal.com',
+    repo: 'https://github.com/erenpinyall/portfolio',
+    stack: ['React', 'Vite', 'Framer Motion', 'CSS'],
+    medium: { en: 'Portfolio and CV · React, Vite, Framer Motion', tr: 'Portföy ve CV · React, Vite, Framer Motion' },
+    desc: {
+      en: 'This site: a bilingual exhibition catalog with live demos, real screenshots, and a dark gallery mode.',
+      tr: 'Bu site: canlı demolar, gerçek ekran görüntüleri ve gece galeri modu olan iki dilli bir sergi kataloğu.',
+    },
+    layout: { span: 7 },
+  },
+  {
     id: 'rag-pdf',
     name: 'rag-pdf',
     plate: 'ragpdf',
@@ -132,7 +151,7 @@ export const projects = [
       en: 'Indexes PDFs and answers from the source documents, fully local.',
       tr: 'PDF’leri indeksleyip yanıtı doğrudan belgelerden verir, tamamen yerel.',
     },
-    layout: { span: 3 },
+    layout: { span: 5 },
   },
   {
     id: 'finance',
@@ -146,7 +165,7 @@ export const projects = [
       en: 'Budget alerts by email, Excel reporting, and a 33-test suite.',
       tr: 'E-posta bütçe uyarıları, Excel raporlama ve 33 testlik paket.',
     },
-    layout: { span: 4 },
+    layout: { span: 7 },
   },
 ];
 
@@ -230,7 +249,7 @@ export const copy = {
       docTitle: 'Eren Pinyal — Full-Stack Developer',
       role: 'Full-stack developer',
       intro:
-        'I build shipped software. Eight pieces below, six live; every frame opens the real thing.',
+        'I build shipped software. Nine pieces below, seven live; every frame opens the real thing.',
       note: 'Live works use product screenshots; the two repository pieces use interface studies.',
       youAreHere: 'You are here',
     },
@@ -255,7 +274,11 @@ export const copy = {
     works: {
       index: '01',
       title: 'Works',
-      note: 'Six live products and two repositories. Bring one under the lights.',
+      note: 'Seven live products and two repositories. The repositories sit behind See more.',
+      more: 'See more',
+      less: 'Show less',
+      moreNote: 'two repository pieces',
+      lessNote: 'repository pieces open',
     },
     skills: {
       index: '02',
@@ -278,7 +301,7 @@ export const copy = {
       cv: 'CV',
     },
     footer: {
-      place: 'Kütahya, Türkiye',
+      place: 'Istanbul, Türkiye',
       colophon: 'Set in Archivo and Spectral. Built with React, Vite, and Framer Motion.',
       top: 'Back to top',
     },
@@ -291,7 +314,7 @@ export const copy = {
       docTitle: 'Eren Pinyal — Full-Stack Geliştirici',
       role: 'Full-stack geliştirici',
       intro:
-        'Yayına alınmış yazılımlar üretiyorum. Aşağıda sekiz iş, altısı canlı; her çerçeve gerçeğini açar.',
+        'Yayına alınmış yazılımlar üretiyorum. Aşağıda dokuz iş, yedisi canlı; her çerçeve gerçeğini açar.',
       note: 'Canlı işler ürün ekran görüntüleriyle; iki depo işi arayüz etüdüyle gösterilir.',
       youAreHere: 'Buradasın',
     },
@@ -316,7 +339,11 @@ export const copy = {
     works: {
       index: '01',
       title: 'İşler',
-      note: 'Altı canlı ürün, iki depo. Birini ışığın altına al.',
+      note: 'Yedi canlı ürün, iki depo. Depolar "Daha fazla" altında.',
+      more: 'Daha fazla',
+      less: 'Daha az göster',
+      moreNote: 'iki depo işi',
+      lessNote: 'depo işleri açık',
     },
     skills: {
       index: '02',
@@ -339,7 +366,7 @@ export const copy = {
       cv: 'CV',
     },
     footer: {
-      place: 'Kütahya, Türkiye',
+      place: 'İstanbul, Türkiye',
       colophon: 'Archivo ve Spectral ile dizildi. React, Vite ve Framer Motion ile kuruldu.',
       top: 'Başa dön',
     },

@@ -11,12 +11,13 @@ import FloorPlan from './components/FloorPlan';
 
 const EASE = [0.2, 0.7, 0.2, 1];
 
-function Reveal({ children, className = '' }) {
+function Reveal({ children, className = '', id }) {
   const reduce = useReducedMotion();
 
   return (
     <motion.div
       className={className}
+      id={id}
       initial={reduce ? false : { opacity: 0, y: 16 }}
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-10%' }}
@@ -31,6 +32,7 @@ export default function App() {
   const [lang, setLang] = useState(() => (localStorage.getItem('lang') === 'tr' ? 'tr' : 'en'));
   const [dark, setDark] = useState(() => localStorage.getItem('theme') === 'dark');
   const [active, setActive] = useState('works');
+  const [showAllWorks, setShowAllWorks] = useState(false);
   const t = copy[lang];
   const reduce = useReducedMotion();
 
@@ -64,6 +66,9 @@ export default function App() {
 
   const hero = projects[0];
   const second = projects[1];
+  const featuredProjects = projects.filter((project) => project.live);
+  const moreProjects = projects.filter((project) => !project.live);
+  const visibleProjects = showAllWorks ? projects : featuredProjects;
 
   return (
     <div className="page" id="top">
@@ -120,17 +125,39 @@ export default function App() {
 
         <section id="works" className="section">
           <SectionHead index={t.works.index} title={t.works.title} note={t.works.note} />
-          <Reveal className="wall">
-            {projects.map((project, index) => (
+          <Reveal className="wall" id="works-wall">
+            {visibleProjects.map((project) => (
               <ExhibitFrame
                 key={project.id}
                 project={project}
-                index={index}
+                index={projects.indexOf(project)}
                 lang={lang}
                 t={t}
               />
             ))}
           </Reveal>
+          {moreProjects.length > 0 ? (
+            <div className="wall-more">
+              <button
+                type="button"
+                className="wall-more-btn"
+                aria-expanded={showAllWorks}
+                aria-controls="works-wall"
+                onClick={() => setShowAllWorks((value) => !value)}
+              >
+                <span>{showAllWorks ? t.works.less : t.works.more}</span>
+                {!showAllWorks ? (
+                  <span className="wall-more-count">({moreProjects.length})</span>
+                ) : null}
+                <span className="wall-more-arrow" aria-hidden="true">
+                  {showAllWorks ? '↑' : '↓'}
+                </span>
+              </button>
+              <p className="wall-more-note">
+                {showAllWorks ? t.works.lessNote : t.works.moreNote}
+              </p>
+            </div>
+          ) : null}
         </section>
 
         <section id="skills" className="section">

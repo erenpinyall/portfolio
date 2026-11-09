@@ -31,14 +31,14 @@ Full-stack breadth backed by working, deployed software: embedded C and hardware
 - Primary public surfaces: `erenpinyal.com` (Vercel), `github.com/erenpinyall`, LinkedIn (`/in/eren-pinyal`), email `erenpinyal122@gmail.com`, CV at `/cv.pdf`.
 - Content is authored in `src/content.js` as static data; no CMS or backend.
 - Existing light/dark theme toggle and smooth-scroll navigation are established behavior.
-- Bilingual English/Turkish presentation is a confirmed requirement; the current site mixes English headings with Turkish project descriptions and must become consistent.
+- Bilingual English/Turkish presentation is a confirmed requirement; all copy lives in `src/content.js` and switches together.
 
 ## Capabilities and Constraints
 
 - React 19 + Vite single-page app, Framer Motion animations, react-icons brand icons, CSS custom properties; deployed on Vercel.
 - No backend, no analytics, no contact form service — contact is mailto/LinkedIn/GitHub.
-- Must stay fast and responsive; current assets include the CV PDF, favicon, six product screenshots in `public/previews`, and the OG image.
-- Live URL and stack mapping now lives in `src/content.js`; Mecrenas, Seçmece, Reno Bayi, and Nabız are represented there. Do not add stacks that are not recorded.
+- Must stay fast and responsive; current assets include the CV PDF, favicon, seven product screenshots in `public/previews`, and the OG image.
+- Live URL and stack mapping now lives in `src/content.js`; Portfolio, Mecrenas, Seçmece, Reno Bayi, and Nabız are represented there. Do not add stacks that are not recorded.
 
 ## Brand Commitments
 
@@ -48,8 +48,9 @@ Full-stack breadth backed by working, deployed software: embedded C and hardware
 
 ## Evidence on Hand
 
-- `src/content.js` contains the eight current works: Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, rag-pdf, and Finance Tracker.
-- Six live projects have URLs and real screenshots: Nabız, Seçmece — Takım Savaşı, Freshy, GitStats, Mecrenas, Reno Bayi. GitStats is live at `yzname.vercel.app`; Reno Bayi's repository is private.
+- `src/content.js` contains the nine current works: Freshy, GitStats, Nabız, Seçmece, Mecrenas, Reno Bayi, Portfolio, rag-pdf, and Finance Tracker.
+- Seven live projects have URLs and real screenshots: Nabız, Seçmece — Takım Savaşı, Freshy, GitStats, Mecrenas, Reno Bayi, and Portfolio. Portfolio is this site and uses a self-portrait screenshot. GitStats is live at `yzname.vercel.app`; Reno Bayi's repository is private.
+- The two repository-only works sit behind the See more control so the wall opens with live work first.
 - Two real internships: demiraysoft (web developer, Aug–Sep 2025) and enel enerji (IT support, Aug–Sep 2024).
 - CV PDF at `public/cv.pdf`, sourced from `ErenPinyalCV.pdf`.
 - Must not fabricate testimonials, benchmarks, client names, or metrics beyond what the repo states (e.g., 85.39% cyberbullying model accuracy is recorded; 33 tests for finance tracker is recorded).
