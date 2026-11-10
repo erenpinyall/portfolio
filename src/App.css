@@ -163,7 +163,7 @@
   display: grid;
   grid-template-columns: 5fr 7fr;
   gap: clamp(32px, 5vw, 72px);
-  align-items: start;
+  align-items: stretch;
   padding: clamp(52px, 7vw, 88px) 0 26px;
 }
 
@@ -247,27 +247,105 @@
   border-color: var(--ink);
 }
 
-.hero-hang {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: clamp(20px, 2.6vw, 34px);
-  align-items: start;
+.hero-card-hold {
+  display: flex;
+  min-width: 0;
 }
 
-.hero-side {
-  display: grid;
-  gap: 26px;
-  padding-top: 48px;
+.hero-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: clamp(22px, 2.4vw, 34px);
+  background: var(--wall-raised);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-frame);
+  transition: background-color 0.35s ease, border-color 0.35s ease;
 }
 
-.hero-note {
-  padding-left: 14px;
-  border-left: 2px solid var(--accent);
+.hero-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+}
+
+.hero-card-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero-card-title {
+  max-width: 16ch;
+  margin-top: clamp(28px, 3.5vw, 48px);
+  font-size: clamp(32px, 3.6vw, 52px);
+  font-stretch: 106%;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.hero-card-place {
+  margin-top: 18px;
   color: var(--muted);
   font-family: 'Spectral', Georgia, serif;
-  font-size: 13px;
+  font-size: 15px;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.4;
+}
+
+.hero-card-facts {
+  display: grid;
+  gap: 0;
+  margin-top: auto;
+  padding-top: clamp(30px, 4vw, 50px);
+}
+
+.hero-card-facts > div {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 16px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+}
+
+.hero-card-facts > div:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-card-facts dt {
+  padding-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-card-facts dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* ---------- Floor plan ---------- */
@@ -424,10 +502,6 @@
   display: block;
 }
 
-.exhibit--hero .exhibit-frame {
-  padding: 14px;
-}
-
 .plate {
   position: relative;
   aspect-ratio: 16 / 10;
@@ -435,10 +509,6 @@
   background: var(--plate-paper);
   border: 1px solid var(--line);
   transition: border-color 0.35s ease, background-color 0.35s ease;
-}
-
-.exhibit--hero .plate {
-  aspect-ratio: 4 / 3;
 }
 
 .plate-svg,
@@ -949,12 +1019,8 @@
     padding-top: 0;
   }
 
-  .hero-hang {
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  }
-
-  .hero-side {
-    padding-top: 28px;
+  .hero-card {
+    padding: 26px;
   }
 
   .wall {
@@ -1081,12 +1147,23 @@
     font-size: clamp(48px, 16vw, 72px);
   }
 
-  .hero-hang {
-    grid-template-columns: 1fr;
+  .hero-card {
+    padding: 22px;
   }
 
-  .hero-side {
-    padding-top: 0;
+  .hero-card-title {
+    max-width: 14ch;
+    margin-top: 28px;
+    font-size: clamp(30px, 9vw, 40px);
+  }
+
+  .hero-card-facts {
+    padding-top: 30px;
+  }
+
+  .hero-card-facts > div {
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 12px;
   }
 
   .hero-actions {

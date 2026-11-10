@@ -1,6 +1,6 @@
 # Design — Eren Pinyal
 
-Eren Pinyal's portfolio is a CV site built as a small exhibition, not a landing-page template. The page is the catalog: nine works hung at varied scale, each with a wall label, a languages-and-frameworks board, a chronology, and a visit panel. English and Turkish are equal views; light is the gallery, dark is after hours.
+Eren Pinyal's portfolio is a CV site built as a small exhibition, not a landing-page template. The page is the catalog: nine works hung at equal scale, each with a wall label, a languages-and-frameworks board, a chronology, and a visit panel. English and Turkish are equal views; light is the gallery, dark is after hours.
 
 The `h1` is **Eren Pinyal**. "Selected Works" is the exhibition metaphor for the wall, not the identity of the site.
 
@@ -13,7 +13,7 @@ The `h1` is **Eren Pinyal**. "Selected Works" is the exhibition metaphor for the
 
 Warm gallery wall, black ink, one vermilion accent, hairline rules, generous margins. Frames are paper mats with a flat offset shadow — the brief's chosen material, not a neobrutalist costume. Depth comes from overlapping flat colour, not gradients or blur. The catalog voice is Spectral; the wall voice is Archivo.
 
-The seven live works use real **product screenshots** in `public/previews` (six restored from the previous portfolio's preview set, plus a current self-portrait of this site), so the wall shows the actual interface. The two repository-only works, rag-pdf and Finance Tracker, keep hand-authored flat SVG **interface studies** and say so in the hero note. `public/og.png` is a 1200×630 crop of the live page captured on 2026-11-09 from `.impeccable/review/desktop.png` for link previews.
+The seven live works use real **product screenshots** in `public/previews` (six restored from the previous portfolio's preview set, plus a current self-portrait of this site), so the wall shows the actual interface. The two repository-only works, rag-pdf and Finance Tracker, keep hand-authored flat SVG **interface studies** and are disclosed as such in the works note. `public/og.png` is a 1200×630 capture of the top of the page (with the header hidden) made on 2026-11-09 for link previews.
 
 ## Tokens
 
@@ -47,6 +47,7 @@ Spacing: `--gutter` clamps 20–56px; `--width` 1320px; sections use 108px verti
 - Display ceiling: 96px. H1 `clamp(54px, 6.5vw, 94px)`; 980–620px `clamp(64px, 10.5vw, 96px)`; ≤620px `clamp(48px, 16vw, 72px)`. Tracking never tighter than `-0.04em`; line-height 0.84 on the h1.
 - Section titles `clamp(30px, 3.6vw, 52px)`. Wall titles 16–20px sentence case so brands keep their spelling. Card labels and metadata are 9–13.5px, uppercase only for structural labels. Headings use `text-wrap: balance`; paragraphs use `pretty`.
 - No eyebrow above the h1. The name is the title; a Spectral italic role line sits under it, then the intro. The floor plan carries the room metadata.
+- The hero's right column is a **visitor-information card**, not a project preview: availability, Istanbul / UTC+3, focus, stack, and background. It keeps the first viewport about the person and leaves the work to the wall.
 
 ## Layout
 
@@ -59,7 +60,8 @@ The skills section is a specimen board: two columns of category panels above 980
 ## Components
 
 - `Header` — sticky 72px (two rows on mobile), wordmark, four room links, lights toggle, EN/TR switch. Active room has a 2px accent underline.
-- `ExhibitFrame` — matte, hairline, flat offset shadow, 16:10 plate (4:3 for the hero), hover lift, "Live demo / Repository" corner tag on hover/focus, wall label with number, `LIVE`/`REPO` status, title, medium, description, links. Live frames use `<img>` screenshots; repository-only frames fall back to `Plate`. Hero previews use a `p` title; wall works use `h3` after the section `h2`.
+- `ProfileCard` — the hero's visitor-information plaque: availability status, location and time zone, and three facts (focus, stack, background). It replaces the old project previews at the top of the page.
+- `ExhibitFrame` — matte, hairline, flat offset shadow, 16:10 plate, hover lift, "Live demo / Repository" corner tag on hover/focus, wall label with number, `LIVE`/`REPO` status, title, medium, description, links. Live frames use `<img>` screenshots; repository-only frames fall back to `Plate`. Wall works use `h3` after the section `h2`.
 - `Plate` — flat SVG interface studies for the two repository-only works, using the `--plate-*` tokens so they invert with the theme.
 - `FloorPlan` — room index and current-location marker; `aria-current="location"` plus an `sr-only` "You are here".
 - `SectionHead` — inline index, `h2`, rule, note. Indices are wayfinding, not decoration.

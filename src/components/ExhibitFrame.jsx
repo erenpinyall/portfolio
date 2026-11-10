@@ -3,16 +3,15 @@ import Plate from './Plate';
 
 const EASE = [0.2, 0.7, 0.2, 1];
 
-export default function ExhibitFrame({ project, index, lang, t, variant = 'wall' }) {
+export default function ExhibitFrame({ project, index, lang, t }) {
   const reduce = useReducedMotion();
   const number = String(index + 1).padStart(2, '0');
   const primary = project.live || project.repo;
   const primaryLabel = project.live ? t.ui.live : t.ui.repo;
-  const isWall = variant === 'wall';
 
   return (
     <motion.article
-      className={`exhibit exhibit--${variant}`}
+      className="exhibit"
       initial={reduce ? false : { opacity: 0, y: 18 }}
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-8%' }}
@@ -49,13 +48,9 @@ export default function ExhibitFrame({ project, index, lang, t, variant = 'wall'
           <span>{number}</span>
           <span>{project.live ? t.ui.liveTag : t.ui.repoTag}</span>
         </div>
-        {isWall ? (
-          <h3 className="wall-title">{project.name}</h3>
-        ) : (
-          <p className="wall-title">{project.name}</p>
-        )}
+        <h3 className="wall-title">{project.name}</h3>
         <p className="wall-medium">{project.medium[lang]}</p>
-        {isWall ? <p className="wall-desc">{project.desc[lang]}</p> : null}
+        <p className="wall-desc">{project.desc[lang]}</p>
         <div className="wall-links">
           {project.live ? (
             <a

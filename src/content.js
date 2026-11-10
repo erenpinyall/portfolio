@@ -241,8 +241,18 @@ export const copy = {
       role: 'Full-stack developer',
       intro:
         'I build web products end to end — from the interface to the API and the data underneath.',
-      note: 'Live works use product screenshots; the two repository pieces use interface studies.',
       youAreHere: 'You are here',
+    },
+    heroCard: {
+      label: 'Visitor information',
+      status: 'Open to work',
+      title: 'Full-stack roles & freelance builds.',
+      timezone: 'UTC+3',
+      facts: [
+        { label: 'Focus', value: 'Interfaces, APIs, and data.' },
+        { label: 'Stack', value: 'React, TypeScript, .NET, PostgreSQL' },
+        { label: 'Background', value: 'Computer engineering · two internships' },
+      ],
     },
     nav: { works: 'Works', skills: 'Skills', experience: 'Experience', contact: 'Contact' },
     ui: {
@@ -265,7 +275,7 @@ export const copy = {
     works: {
       index: '01',
       title: 'Works',
-      note: 'Six live products on the wall; Portfolio and two repositories open with See more.',
+      note: 'Six live products on the wall; Portfolio and two repository pieces (interface studies) open with See more.',
       more: 'See more',
       less: 'Show less',
       moreNote: 'Portfolio and two repositories',
@@ -306,8 +316,18 @@ export const copy = {
       role: 'Full-stack geliştirici',
       intro:
         'Arayüzden API’ye ve altındaki veriye kadar web ürünlerini uçtan uca geliştiriyorum.',
-      note: 'Canlı işler ürün ekran görüntüleriyle; iki depo işi arayüz etüdüyle gösterilir.',
       youAreHere: 'Buradasın',
+    },
+    heroCard: {
+      label: 'Ziyaretçi bilgisi',
+      status: 'İşe açık',
+      title: 'Full-stack pozisyonlar ve freelance işler.',
+      timezone: 'UTC+3',
+      facts: [
+        { label: 'Odak', value: 'Arayüzler, API’ler ve veri.' },
+        { label: 'Stack', value: 'React, TypeScript, .NET, PostgreSQL' },
+        { label: 'Geçmiş', value: 'Bilgisayar mühendisliği · iki staj' },
+      ],
     },
     nav: { works: 'İşler', skills: 'Yetenekler', experience: 'Deneyim', contact: 'İletişim' },
     ui: {
@@ -330,7 +350,7 @@ export const copy = {
     works: {
       index: '01',
       title: 'İşler',
-      note: 'Duvarda altı canlı ürün; Portfolio ve iki depo "Daha fazla" ile açılır.',
+      note: 'Duvarda altı canlı ürün; Portfolio ve iki depo işi (arayüz etüdü) "Daha fazla" ile açılır.',
       more: 'Daha fazla',
       less: 'Daha az göster',
       moreNote: 'Portfolio ve iki depo',

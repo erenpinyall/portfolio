@@ -14,7 +14,7 @@ React 19 · Vite · Framer Motion · CSS custom properties · Vercel
 
 [Canlı site](https://erenpinyal.com) · [CV](https://erenpinyal.com/cv.pdf) · [LinkedIn](https://www.linkedin.com/in/eren-pinyal) · [GitHub](https://github.com/erenpinyall)
 
-<img src="public/og.png" alt="Eren Pinyal — krem galeri duvarı üzerinde canlı proje ekran görüntüleri" width="100%" />
+<img src="public/og.png" alt="Eren Pinyal — krem galeri duvarı üzerinde isim ve ziyaretçi bilgisi kartı" width="100%" />
 
 </div>
 
@@ -22,6 +22,7 @@ React 19 · Vite · Framer Motion · CSS custom properties · Vercel
 
 Portfolyo bir sergi kataloğu gibi okunur: işler eşit ölçekte asılır, her birinin numarası, durumu, malzemesi ve canlı bağlantısı olan bir duvar etiketi vardır. Kat planı nerede olduğunuzu söyler; dil ve framework panosu teknik genişliği, kronoloji ise iki stajı gösterir. Amaç, ilk ekranda kimlik + kanıt + eylem vermek; süslemek değil.
 
+- **Üst alan:** proje görseli yerine ziyaretçi kartı; uygunluk, İstanbul/UTC+3, odak, stack ve iki staj.
 - **Sergi duvarı:** üç sütunlu eşit kart ızgarası; masaüstünde üç, tablette iki, mobilde tek sütun.
 - **Duvar etiketleri:** durum (canlı/depo), teknoloji, kısa açıklama, canlı demo ve repo bağlantısı.
 - **Gerçek görseller:** yedi canlı iş, ürünlerin ekran görüntüleriyle; iki depo işi elle çizilmiş arayüz etüdüyle gösterilir.

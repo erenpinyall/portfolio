@@ -8,6 +8,7 @@ import SectionHead from './components/SectionHead';
 import SkillIndex from './components/SkillIndex';
 import Chronology from './components/Chronology';
 import FloorPlan from './components/FloorPlan';
+import ProfileCard from './components/ProfileCard';
 
 const EASE = [0.2, 0.7, 0.2, 1];
 const INITIAL_WORK_COUNT = 6;
@@ -65,8 +66,6 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  const hero = projects[0];
-  const second = projects[1];
   const initialProjects = projects.slice(0, INITIAL_WORK_COUNT);
   const moreProjects = projects.slice(INITIAL_WORK_COUNT);
   const visibleProjects = showAllWorks ? projects : initialProjects;
@@ -113,13 +112,14 @@ export default function App() {
             </div>
           </motion.div>
 
-          <div className="hero-hang">
-            <ExhibitFrame project={hero} index={0} lang={lang} t={t} variant="hero" />
-            <div className="hero-side">
-              <ExhibitFrame project={second} index={1} lang={lang} t={t} variant="hero-mini" />
-              <p className="hero-note">{t.head.note}</p>
-            </div>
-          </div>
+          <motion.div
+            className="hero-card-hold"
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+          >
+            <ProfileCard t={t} />
+          </motion.div>
 
           <FloorPlan t={t} active={active} />
         </section>
